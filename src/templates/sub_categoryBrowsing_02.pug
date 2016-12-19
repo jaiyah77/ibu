@@ -1,0 +1,313 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap
+			//[MARKUP] 토글시 .is_closed 추가
+			aside.aside
+				.aside_logo
+					.logo_naver(title="Naver")
+					.logo_ibu(title="IBU")
+				.aside_toggle
+					button.toggle_button(role="button" aria-label="GNB 접기")
+				menu.aside_menu
+					.menu_list
+						a.menu_item.as_item_01.is_selected(href="#"): span.text 검색
+						.menu_2depth
+							a(href="#"): span.text 통합 데이터
+							.menu_3depth
+								a(href="#").is_selected: span.text 전체
+								a(href="#"): span.text 사이트+지역
+								a(href="#"): span.text 사이트
+								a(href="#"): span.text 지역
+							a(href="#"): span.text 카테고리
+							.menu_3depth
+								a(href="#"): span.text 카테고리
+						a.menu_item.as_item_02(href="#"): span.text 카테고리
+						a.menu_item.as_item_03(href="#"): span.text 통합데이터
+						a.menu_item.as_item_04(href="#"): span.text 바로가기
+						a.menu_item.as_item_05(href="#"): span.text 요청
+						a.menu_item.as_item_06(href="#"): span.text 통계
+						a.menu_item.as_item_07(href="#"): span.text 기타
+						a.menu_item.as_item_08(href="#"): span.text 브랜드
+				.aside_btns
+					a.anchor(href="#" title="등록"): span.text 통합데이터 등록
+					a.anchor(href="#" title="검색"): span.text 전체 사유 검색하기
+			main.main
+				.main_top
+					.top_left
+						span.top_user
+							span.user_photo
+								img.photo
+							a.user_name(href="#")
+								span.name 박재나
+								span.id (NT111111)
+						i.separator
+						a(href="#") 로그아웃
+						a.top_more(href="#") 서비스목록
+					.top_right
+						a(href="#") IIMS
+						i.separator
+						a(href="#") 브라우저설정
+						i.separator
+						a(href="#") 자주묻는질문
+						i.separator
+						a(href="#") 개인권한
+						i.separator
+						a(href="#") DRT 담당자안내
+						i.separator
+						a.top_more(href="#") 더보기 
+				.container-fluid
+					.row
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 통합데이타
+
+									select.form-control
+										option(disabled selected) 지역상세 ID
+										option 1
+										option 2
+										option 3
+										option 4
+										option 5
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 카테고리
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 지역(주소)
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+
+					.row.row_type1
+						.col-xs-12
+							ul.line_map
+								li: a(href="#") HOME
+								li: a(href="#") 인물, 사람들
+								li: a(href="#") 배우
+								li: a(href="#") 뮤지컬배우
+							table.table.table-bordered
+								colgroup
+									col(style="width:185px")
+									col
+								tbody
+									tr
+										th(scope="row") 영문경로
+										td /People/Actor/Musical_Actor
+									tr
+										th(scope="row" rowspan="2") 연관링크
+										td
+											a.link_decoration(href="#") 문화, 예술 > 공연예술 > 뮤지컬
+											span > 뮤지컬 배우 @
+									tr
+										td
+											a.link_decoration(href="#") 인물, 사람들 > 공연예술가 > 뮤지컬
+											span > 뮤지컬 배우 @
+							h5.heading5_ibu 코디 카테고리
+								small 코디 키워드 지정이 안되어 있습니다.
+							.clearfix
+								p.result_number
+									span - 하위 카테고리 :
+									span.
+										총 #[strong.point_color_03 86] 건
+									button.btn.btn-default(role="button") 숨김/보임
+
+							// [MARKUP] 숨김처리 클래스 .sub_category 에 .is_hidden 토글
+							.sub_category
+								h6.sub_category_title NULL_1
+								ul.clearfix
+									li
+										input(type="checkbox")
+										a(href="#") 최대글자수 모름, 임으로 지정 @
+										span.point_color_07 [코디]
+									li
+										input(type="checkbox")
+										a(href="#") 최대글자수 모름, 임으로 지정 @
+										span.point_color_07 [코디]
+									li
+										input(type="checkbox")
+										a(href="#") 앤티크, 클래식가구
+										span.point_color_07 [코디하위]
+									li
+										input(type="checkbox")
+										a(href="#") 최대글자수 모름, 임으로 지정 @
+										span.point_color_07 [코디]
+									li
+										input(type="checkbox")
+										a(href="#") 강동호
+										span.point_color_07 [패스][노출이름]
+									li
+										input(type="checkbox")
+										a(href="#") 강동호
+										span.point_color_07 [패스][노출이름]
+									li
+										input(type="checkbox")
+										a(href="#") 학교, 학원교구
+										span.point_color_07 [패스][노출이름]
+									li
+										input(type="checkbox")
+										a(href="#") 강동호
+										span.point_color_07 [패스][노출이름]
+									li
+										input(type="checkbox")
+										a(href="#") 강태을 @
+									li
+										input(type="checkbox")
+										a(href="#") 도서관가구
+										span.point_color_07
+									li
+										input(type="checkbox")
+										a(href="#") 송창의
+									li
+										input(type="checkbox")
+										a(href="#") 강태을 @
+								h6.sub_category_title NULL_1
+								ul.clearfix
+									li
+										input(type="checkbox")
+										a(href="#") 침대
+										span.point_color_07 [코디하위]
+									li
+										input(type="checkbox")
+										a(href="#") 최대글자수 모름, 임으로 지정 @
+										span.point_color_07 [코디]
+									li
+										input(type="checkbox")
+										a(href="#") 앤티크, 클래식가구
+										span.point_color_07 [코디하위]
+									li
+										input(type="checkbox")
+										a(href="#") 책상
+										span.point_color_07 [코디]
+									li
+										input(type="checkbox")
+										a(href="#") 강동호 @
+										span.point_color_07 [패스][노출이름]
+									li
+										input(type="checkbox")
+										a(href="#") 강동호
+										span.point_color_07 [패스][노출이름]
+									li
+										input(type="checkbox")
+										a(href="#") 소파
+										span.point_color_07 [패스][노출이름]
+									li
+										input(type="checkbox")
+										a(href="#") 도서관가구
+										span.point_color_07 [패스][노출이름]
+									li
+										input(type="checkbox")
+										a(href="#") 시릴 니콜라이 @
+									li
+										input(type="checkbox")
+										a(href="#") 오나라 @
+										span.point_color_07
+									li
+										input(type="checkbox")
+										a(href="#") 김도현 @
+									li
+										input(type="checkbox")
+										a(href="#") 강태을 @
+								h6.sub_category_title 자동색인
+								h6.sub_category_title 사이트 카테고리
+
+							.clearfix
+								p.result_number.help-block
+									span - 통합데이터 :
+									span.
+										총 #[strong.point_color_03 715] 건
+									span.form-inline
+										select.form-control(style="width:130px")
+											option(selected) 전체
+											option 1
+										input.form-control(type="text" id="" style="width:60px")
+										| &nbsp;개씩 &nbsp;&nbsp;
+										select.form-control(style="width:130px")
+											option(selected) 정렬안함
+											option 1
+										button.btn.btn-default(role="button") 보기
+
+							.list_data
+								ul
+									li
+										input(type="checkbox" id="")
+										a(href="#") 필하우스
+										b.point_color_02 (1)
+										span.point_color_05 [사이트]
+										span.point_color_06 [이용자]
+										span.text - 가구 판매 전문업체, 공주침대, 화장대, 화이트 엔틱 장식장, 붙박이장 등 맞춤 안내.
+										| 클릭 :
+										span.point_color_03  0.235668
+										button.btn.btn-default(role="button") 수정
+									li
+										input(type="checkbox" id="")
+										a(href="#") 고양시부자재 토탈하드웨어
+										b.point_color_02 (1)
+										span.point_color_07 [바로가기]
+										span.point_color_05 [사이트]
+										span.point_color_06 [이용자편집]
+										span.point_color_08 [에디터]
+										span.text - 경기,고양시,일산서구,가구,인테리어,공방,씽크부자재전문업체.
+										| 클릭 :
+										span.point_color_03  0.235668
+										button.btn.btn-default(role="button") 수정
+									li
+										input(type="checkbox" id="")
+										a(href="#") 미지애
+										b.point_color_02 (1)
+										span.point_color_05 [사이트]
+										span.point_color_08 [에디터]
+										span.text - 생활용품 판매업체, 달력, 방석, 앞치마, 침구, 가방 등 판매.
+										| 클릭 :
+										span.point_color_03  0.0
+										button.btn.btn-default(role="button") 수정
+
+
+
+
+
+							.paginate.text-center
+								ul.pagination
+									li.page-item
+										a.page-link(href="#")
+											i.fa.fa-angle-left(aria-hidden="true")
+											span.sr-only 목록에서 이전 페이지로 이동
+									// [MARKUP] 선택된 페이지 비활성화 .disabled 처리
+									li.page-item.disabled
+										a.page-link(href="#") 1
+									li.page-item
+										a.page-link(href="#") 2
+									li.page-item
+										a.page-link(href="#") 3
+									li.page-item
+										a.page-link(href="#") 4
+									li.page-item
+										a.page-link(href="#") 5
+									li.page-item
+										a.page-link(href="#") 6
+									li.page-item
+										a.page-link(href="#") 7
+									li.page-item
+										a.page-link(href="#") 8
+									li.page-item
+										a.page-link(href="#") 9
+									li.page-item
+										a.page-link(href="#" title="다음")
+											i.fa.fa-angle-right(aria-hidden="true")
+											span.sr-only 목록에서 다음 페이지로 이동
+
+				footer.main_footer
+					address Copyright © NAVER Corp. All Rights Reserved.
+

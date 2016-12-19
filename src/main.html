@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>IBU</title>
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/ibu.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<!--[MARKUP] 토글시 .is_closed 추가-->
+			<aside class="aside">
+				<div class="aside_logo">
+					<div class="logo_naver" title="Naver"></div>
+					<div class="logo_ibu" title="IBU"></div>
+				</div>
+				<div class="aside_toggle">
+					<button class="toggle_button" role="button" aria-label="GNB 접기"></button>
+				</div>
+				<menu class="aside_menu">
+					<div class="menu_list">
+						<a class="menu_item as_item_01" href="#">
+							<span class="text">검색</span>
+						</a>
+						<a class="menu_item as_item_02" href="#">
+							<span class="text">카테고리</span>
+						</a>
+						<a class="menu_item as_item_03" href="#">
+							<span class="text">통합데이터</span>
+						</a>
+						<a class="menu_item as_item_04" href="#">
+							<span class="text">바로가기</span>
+						</a>
+						<a class="menu_item as_item_05" href="#">
+							<span class="text">요청</span>
+						</a>
+						<a class="menu_item as_item_06" href="#">
+							<span class="text">통계</span>
+						</a>
+						<a class="menu_item as_item_07" href="#">
+							<span class="text">기타</span>
+						</a>
+						<a class="menu_item as_item_08" href="#">
+							<span class="text">브랜드</span>
+						</a>
+					</div>
+				</menu>
+				<div class="aside_btns">
+					<a class="anchor" href="#" title="등록">
+						<span class="text">통합데이터 등록</span>
+					</a>
+					<a class="anchor" href="#" title="검색">
+						<span class="text">전체 사유 검색하기</span>
+					</a>
+				</div>
+			</aside>
+			<main class="main">
+				<div class="main_top">
+					<div class="top_left">
+						<span class="top_user">
+							<span class="user_photo">
+								<img class="photo">
+							</span>
+							<a class="user_name" href="#">
+								<span class="name">박재나</span>
+								<span class="id">(NT111111)</span>
+							</a>
+						</span>
+						<i class="separator"></i>
+						<a href="#">로그아웃</a>
+						<a class="top_more" href="#">서비스목록</a>
+						<!-- [MARKUP] : 서비스목록 하위 메뉴 토글시 .is_dropped-->
+						<ul class="dropdown-menu is_dropped">
+							<li>
+								<a href="#">MOA</a>
+							</li>
+							<li>
+								<a href="#">MTV</a>
+							</li>
+							<li>
+								<a href="#">DRT</a>
+							</li>
+							<li>
+								<a href="#">LDB</a>
+							</li>
+							<li>
+								<a href="#">DLA</a>
+							</li>
+						</ul>
+					</div>
+					<div class="top_right">
+						<a href="#">IIMS</a>
+						<i class="separator"></i>
+						<a href="#">브라우저설정</a>
+						<i class="separator"></i>
+						<a href="#">자주묻는질문</a>
+						<i class="separator"></i>
+						<a href="#">개인권한</a>
+						<i class="separator"></i>
+						<a href="#">DRT 담당자안내</a>
+						<i class="separator"></i>
+						<a class="top_more" href="#">더보기</a>
+						<!-- [MARKUP] : 더보기 메뉴 토글시 .is_dropped-->
+						<ul class="dropdown-menu is_dropped">
+							<li>
+								<a href="#">서비스 담당자 검색</a>
+							</li>
+							<li>
+								<a href="#">게시판_공지사항</a>
+							</li>
+							<li>
+								<a href="#">게시판_업무의뢰</a>
+							</li>
+							<li>
+								<a href="#">게시판_오처리 리포팅</a>
+							</li>
+							<li>
+								<a href="#">도움말</a>
+							</li>
+							<li>
+								<a href="#">장애신고</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-4">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="">통합데이타</label>
+									<select class="form-control">
+										<option disabled selected>지역상세 ID</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									<input class="form-control" type="text" id="" style="width:140px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-xs-4">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="">카테고리</label>
+									<input class="form-control" type="text" id="" style="width:140px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-xs-4">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="">지역(주소)</label>
+									<input class="form-control" type="text" id="" style="width:140px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="heading">
+								<h5>데이타 현황</h5>
+								<div class="heading-sub">
+									<span class="date">(2016.09.08 16:00 기준)</span>
+								</div>
+							</div>
+							<table class="table table-bordered">
+								<colgroup>
+									<col>
+									<col style="width:150px">
+									<col style="width:150px">
+									<col>
+									<col style="width:150px">
+									<col style="width:150px">
+									<col style="width:150px">
+								</colgroup>
+								<tr>
+									<th rowspan="5">통합데이타 건수</th>
+									<td colspan="2">
+										<strong class="sum">전체
+											<b class="num num-accent-1">2,612,154</b> 건</strong>
+									</td>
+									<th rowspan="5">요청 건수</th>
+									<td colspan="3">
+										<strong class="sum">대기
+											<b class="num num-accent-2">2,612,154</b> 건</strong>
+										<strong class="sum">처리
+											<b class="num num-accent-3">689</b> 건</strong>
+									</td>
+								</tr>
+								<tr>
+									<td>사이트+지역</td>
+									<td>
+										<b class="num num-fixed">0</b> 건</td>
+									<td></td>
+									<td>
+										<div class="text-center">대기</div>
+									</td>
+									<td>
+										<div class="text-center">완료</div>
+									</td>
+								</tr>
+								<tr>
+									<td>사이트</td>
+									<td>
+										<b class="num num-fixed">743,535</b> 건</td>
+									<td>
+										<div class="text-center">등록요청</div>
+									</td>
+									<td>
+										<b class="num num-fixed num-accent-2">743,535</b> 건</td>
+									<td>
+										<b class="num num-fixed num-accent-3">351</b> 건</td>
+								</tr>
+								<tr>
+									<td>지역</td>
+									<td>
+										<b class="num num-fixed">1,743,535</b> 건</td>
+									<td>
+										<div class="text-center">수정요청</div>
+									</td>
+									<td>
+										<b class="num num-fixed num-accent-2">743,535</b> 건</td>
+									<td>
+										<b class="num num-fixed num-accent-3">351</b> 건</td>
+								</tr>
+								<tr>
+									<td>웹수집문서</td>
+									<td>
+										<b class="num num-fixed">743,535</b> 건</td>
+									<td>
+										<div class="text-center">삭제요청</div>
+									</td>
+									<td>
+										<b class="num num-fixed num-accent-2">35</b> 건</td>
+									<td>
+										<b class="num num-fixed num-accent-3">51</b> 건</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="heading">
+								<h5>공지사항</h5>
+								<div class="heading-sub">
+									<a class="more" href="#">전체보기</a>
+								</div>
+							</div>
+							<table class="table table-ibu-1">
+								<colgroup>
+									<col>
+									<col style="width:150px">
+									<col style="width:150px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>제목</th>
+										<th>등록자</th>
+										<th>등록일</th>
+									</tr>
+								</thead>
+								<tr>
+									<td>
+										<a href="#">[전체 바로가기 관련 개선 적용으로 DRT 일시 중단</a>
+									</td>
+									<td class="text-center">강춘식</td>
+									<td class="text-center">2012.12.06</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="#">[전체 바로가기 관련 개선 적용으로 DRT 일시 중단</a>
+									</td>
+									<td class="text-center">강춘식</td>
+									<td class="text-center">2012.12.06</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="heading">
+								<h5>업무의뢰</h5>
+								<div class="heading-sub">
+									<a class="more" href="#">전체보기</a>
+								</div>
+							</div>
+							<table class="table table-ibu-1">
+								<colgroup>
+									<col>
+									<col style="width:150px">
+									<col style="width:150px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>제목</th>
+										<th>등록자</th>
+										<th>등록일</th>
+									</tr>
+								</thead>
+								<tr>
+									<td>
+										<a href="#">[사이트] 넥서스9 보강 요청</a>
+									</td>
+									<td class="text-center">김도연</td>
+									<td class="text-center">2014.10.16</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="num-accent-1">ㄴ RE :
+											<a href="#">[사이트] 넥서스9 보강 요청</a>
+										</span>
+									</td>
+									<td class="text-center">이만수</td>
+									<td class="text-center">2014.10.16</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="#">로이드 홈페이지 추가</a>
+									</td>
+									<td class="text-center">김종범</td>
+									<td class="text-center">2014.09.24</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="num-accent-1">ㄴ RE :
+											<a href="#">로이드 홈페이지 추가</a>
+										</span>
+									</td>
+									<td class="text-center">이만수</td>
+									<td class="text-center">2014.09.24</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<footer class="main_footer">
+					<address>Copyright © NAVER Corp. All Rights Reserved.</address>
+				</footer>
+			</main>
+		</div>
+	</body>
+</html>
+<!-- [MARKUP] 테스트용 임시 코드--><script src="http://view.gitlab2.uit.nhncorp.com/wankyu/test.js/raw/master/dist/test.js"></script><script>(function(){
+	window.addEventListener('hashchange', function() {
+		window.location.reload();
+	});
+
+	_TEST_.setTestHash('menu_closed', function() {
+		document.getElementsByClassName('aside')[0].classList.add('is_closed');
+	});
+})();</script>

@@ -1,0 +1,704 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap
+			//[MARKUP] 토글시 .is_closed 추가
+			aside.aside
+				.aside_logo
+					.logo_naver(title="Naver")
+					.logo_ibu(title="IBU")
+				.aside_toggle
+					button.toggle_button(role="button" aria-label="GNB 접기")
+				menu.aside_menu
+					.menu_list
+						a.menu_item.as_item_01.is_selected(href="#"): span.text 검색
+						.menu_2depth
+							a(href="#"): span.text 통합 데이터
+							.menu_3depth
+								a(href="#").is_selected: span.text 전체
+								a(href="#"): span.text 사이트+지역
+								a(href="#"): span.text 사이트
+								a(href="#"): span.text 지역
+							a(href="#"): span.text 카테고리
+							.menu_3depth
+								a(href="#"): span.text 카테고리
+						a.menu_item.as_item_02(href="#"): span.text 카테고리
+						a.menu_item.as_item_03(href="#"): span.text 통합데이터
+						a.menu_item.as_item_04(href="#"): span.text 바로가기
+						a.menu_item.as_item_05(href="#"): span.text 요청
+						a.menu_item.as_item_06(href="#"): span.text 통계
+						a.menu_item.as_item_07(href="#"): span.text 기타
+						a.menu_item.as_item_08(href="#"): span.text 브랜드
+				.aside_btns
+					a.anchor(href="#" title="등록"): span.text 통합데이터 등록
+					a.anchor(href="#" title="검색"): span.text 전체 사유 검색하기
+			main.main
+				.main_top
+					.top_left
+						span.top_user
+							span.user_photo
+								img.photo
+							a.user_name(href="#")
+								span.name 박재나
+								span.id (NT111111)
+						i.separator
+						a(href="#") 로그아웃
+						a.top_more(href="#") 서비스목록
+					.top_right
+						a(href="#") IIMS
+						i.separator
+						a(href="#") 브라우저설정
+						i.separator
+						a(href="#") 자주묻는질문
+						i.separator
+						a(href="#") 개인권한
+						i.separator
+						a(href="#") DRT 담당자안내
+						i.separator
+						a.top_more(href="#") 더보기
+				.container-fluid
+					.row
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 통합데이타
+
+									select.form-control
+										option(disabled selected) 지역상세 ID
+										option 1
+										option 2
+										option 3
+										option 4
+										option 5
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 카테고리
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 지역(주소)
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+
+					.row.row_type1
+						.col-xs-12
+							h4 통합데이터 다운로드
+							table.table-ibu-default
+								colgroup
+									col(style="width:51.5%")
+									col(style="width:14%")
+									col(style="width:11.5%")
+									col(style="width:11.5%")
+									col(style="width:11.5%")
+								thead
+									tr
+										th 대표  카테고리
+										th 유형
+										th 상태
+										th 광고
+										th 형식
+								tbody
+									tr
+										td.text-left
+											.form-row
+												| 대표 카테고리
+												| &nbsp;&nbsp;[&nbsp;&nbsp;
+												label.checkbox-inline
+													input(type="checkbox" id="")
+													| ID
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 영문명
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 영문경로
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 한글명
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 한글경로
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 카테고리명
+												| &nbsp;&nbsp;]
+											.form-row
+												label.checkbox-inline
+													input(type="checkbox" id="")
+													| 지역카테고리
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 카테고리ID 리스트(세미콜론 구분)
+											.form-row
+												label.checkbox-inline
+													input(type="checkbox" id="")
+													| 대표카테고리
+												.form-group
+													button.btn.btn-default(role="button") 필드추가
+													button.btn.btn-default(role="button") 필드삭제
+													small (※ 하위카테고리도 조회시 카테고리ID 앞 체크박스 클릭)
+											.form-row
+												.form-inline
+													input.check_alone(type="checkbox" id="")
+													input.form-control(type="text" id="" style="width:80px")
+													input.form-control(type="text" id="" style="width:255px")
+													button.btn.btn-default(role="button") 검색
+													button.btn.btn-default(role="button") 열기
+													button.btn.btn-default(role="button") 서비스
+													button.btn.btn-default(role="button") 리셋
+											.form-row
+												.form-inline
+													input.check_alone(type="checkbox" id="")
+													input.form-control(type="text" id="" style="width:80px")
+													input.form-control(type="text" id="" style="width:255px")
+													button.btn.btn-default(role="button") 검색
+													button.btn.btn-default(role="button") 열기
+													button.btn.btn-default(role="button") 서비스
+													button.btn.btn-default(role="button") 리셋
+										td
+											select.form-control(style="width:100%")
+												option(disabled selected) 사이트+지역
+												option 1
+										td
+											select.form-control(style="width:100%")
+												option(selected) 일시정지
+												option 1
+										td
+											select.form-control(style="width:100%")
+												option(selected) 광고집행
+												option 1
+										td
+											select.form-control(style="width:100%")
+												option(selected) 이용자
+												option 1
+
+							table.table-ibu-default.table-ibu-type2
+								colgroup
+									col(style="width:6%")
+									col(style="width:42%")
+									col(style="width:9%")
+									col(style="width:43%")
+								thead
+									tr
+										th(colspan="4" scope="col") URL, Phone, 설명, 제목, 업체명, alias, 업체alias, 업체대표키워드
+								tbody
+									tr.table_padding1
+										td.text-right
+											label.checkbox-inline
+												input(type="checkbox" id="")
+												| URL
+										td.text-left
+											span.form-inline
+												select.form-control(style="width:120px")
+													option(selected) begin Width
+													option 1
+												input.form-control(type="text" style="width:330px")
+										td.text-right 업체명
+										td.text-left
+											span.form-inline
+												select.form-control(style="width:120px")
+													option(selected) =
+													option 1
+												input.form-control(type="text" style="width:330px")
+									tr.table_padding1
+										td.text-right Phone
+										td.text-left
+											span.form-inline
+												select.form-control(style="width:120px")
+													option(selected) =
+													option 1
+												input.form-control(type="text" style="width:330px")
+										td.text-right 업체alias
+										td.text-left
+											span.form-inline
+												select.form-control(style="width:120px")
+													option(selected) begin Width
+													option 1
+												input.form-control(type="text" style="width:330px")
+									tr.table_padding1
+										td.text-right 설명
+										td.text-left
+											span.form-inline
+												select.form-control(style="width:120px")
+													option(selected) =
+													option 1
+												input.form-control(type="text" style="width:330px")
+										td.text-right 업체대표키워드
+										td.text-left
+											span.form-inline
+												select.form-control(style="width:120px")
+													option(selected) begin Width
+													option 1
+												input.form-control(type="text" style="width:330px")
+									tr.table_padding1
+										td.text-right 제목
+										td.text-left
+											span.form-inline
+												select.form-control(style="width:120px")
+													option(selected) =
+													option 1
+												input.form-control(type="text" style="width:330px")
+										td.text-right 워드
+										td.text-left
+											span.form-inline
+												select.form-control(style="width:120px")
+													option(selected) begin Width
+													option 1
+												input.form-control(type="text" style="width:330px")
+
+							table.table-ibu-default.table-ibu-type2
+								colgroup
+									col(style="width:100%")
+								thead
+									tr
+										th 등록일, 수정일, GDID, 업로드
+								tbody
+									tr
+										td.text-left
+											.form-inline
+												| 등록일&nbsp;
+												span.btn_set
+													input.form-control(type="text" id="" style="width:90px")
+													button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+												span ~
+												span.btn_set
+													input.form-control(type="text" id="" style="width:90px")
+													button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+												.form-group
+													| 수정일&nbsp;
+													span.btn_set
+														input.form-control(type="text" id="" style="width:90px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+													span ~
+													span.btn_set
+														input.form-control(type="text" id="" style="width:90px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+												.form-group
+													label.radio-inline
+														input(type="radio" id="" name="radio-01")
+														| 통합ID
+													label.radio-inline
+														input(type="radio" id="" name="radio-01")
+														| 지역상세ID
+													input.form-control(type="text" id="" style="215px")
+													button.btn.btn-default(role="button") 파일선택
+
+							table.table-ibu-default.table-ibu-type2
+								colgroup
+									col(style="width:100%")
+								thead
+									tr
+										th 주소
+								tbody
+									tr
+										td.text-left
+											.form-inline
+												.form-row
+													| 지번주소1&nbsp;
+													span.form-inline
+														select.form-control(style="width:120px")
+															option(selected) begin
+															option 1
+														input.form-control(type="text" id="" style="width:330px")
+														.form-group
+															label.checkbox-inline
+																input(type="checkbox" id="")
+																| 주소2
+															label.checkbox-inline
+																input(type="checkbox" id="")
+																| 주소3
+														.form-group
+															| 동코드&nbsp;
+															select.form-control(style="width:120px")
+																option(selected) begin
+																option 1
+														.form-group
+															| 지도유무&nbsp;
+															select.form-control(style="width:120px")
+																option(selected) begin
+																option 1
+												.form-row
+													| 도로주소1&nbsp;
+													span.form-inline
+														select.form-control(style="width:120px")
+															option(selected) like
+															option 1
+														input.form-control(type="text" id="" style="width:330px")
+														.form-group
+															label.checkbox-inline
+																input(type="checkbox" id="")
+																| 주소2
+															label.checkbox-inline
+																input(type="checkbox" id="")
+																| 주소3
+														.form-group
+															| &nbsp;&nbsp;&nbsp;레벨&nbsp;
+															select.form-control(style="width:120px")
+																option(selected) begin
+																option 1
+														.form-group
+															| X&nbsp;
+															select.form-control(style="width:120px")
+																option(selected) begin
+																option 1
+														.form-group
+															| Y&nbsp;
+															select.form-control(style="width:120px")
+																option(selected) begin
+																option 1
+
+							table.table-ibu-default.table-ibu-type2
+								colgroup
+									col(style="width:100%")
+								thead
+									tr
+										th 바로가기
+								tbody
+									tr
+										td.text-left
+											.form-inline
+												.form-row
+													| 키워드&nbsp;
+													select.form-control(style="width:120px")
+														option(selected) begin Width
+														option 1
+													input.form-control(type="text" id="" style="width:340px")
+													.form-group
+														| &nbsp;&nbsp;상태&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 대상&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 이동&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+												.form-row
+													select.form-control(style="width:120px")
+														option(selected) 등록일
+														option 1
+													span.btn_set
+														input.form-control(type="text" id="" style="width:90px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+													span ~
+													span.btn_set
+														input.form-control(type="text" id="" style="width:90px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 바로가기 GDID
+													.form-group
+														| 서브링크&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 전화번호&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+
+							table.table-ibu-default.table-ibu-type2
+								colgroup
+									col(style="width:100%")
+								thead
+									tr
+										th 기타 추가정보
+								tbody
+									tr
+										td.text-left
+											.form-inline
+												.form-row
+													| 노출URL&nbsp;
+													select.form-control(style="width:120px")
+														option(selected) 전체
+														option 1
+													.form-group
+														| 노출Phone&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 전화번호 임의생성&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 신청자&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+
+							table.table-ibu-default.table-ibu-type2
+								colgroup
+									col(style="width:100%")
+								thead
+									tr
+										th 기타 추가정보
+								tbody
+									tr
+										td.text-left
+											.form-inline
+												.form-row
+													label.checkbox-inline
+														input(type="checkbox")
+														| 데드
+													label.checkbox-inline
+														input(type="checkbox")
+														| 클릭
+													label.checkbox-inline
+														input(type="checkbox")
+														| 집중키워드
+													label.checkbox-inline
+														input(type="checkbox")
+														| 유형
+													.form-group
+														| 이용자 편집&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 공식&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 체크아웃&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 데드링크&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+												.form-row
+													| 이전제목&nbsp;
+													select.form-control(style="width:120px")
+														option(selected) 전체
+														option 1
+													input.form-control(type="text" id="" style="width:280px")
+													.form-group
+														| 모바일&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 모바일매핑&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 다이렉트여부&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+
+							table.table-ibu-default.table-ibu-type2
+								colgroup
+									col(style="width:100%")
+								thead
+									tr
+										th 지역 상세정보
+								tbody
+									tr
+										td.text-left
+											form.form-inline
+												.form-row
+													ul.list_checkitem
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 정보제공처
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 정보제공처URL
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 상세설명
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 상세설명출처
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 찾아오는길
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 1인당 평균가격
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 가격정보
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 객실정보
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 이미지개수
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 메뉴판 이미지개수
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 테마 입력여부
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 이용시간
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 이용시간 내용
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 펜션제공서비스 입력
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 체크인/체크아웃 입력
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 스타일리스트 개수
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 기술사진정보 개수
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 시술사진 이미지 개수
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 시술어울리는 정보개수
+														li: label.checkbox-inline
+															input(type="checkbox" id="")
+															| 비즈캐쳐
+												.form-row
+													| DB 연동&nbsp;
+													select.form-control(style="width:140px")
+														option(selected) 건강서비스 상담소
+														option 1
+													.form-group
+														| 쿠폰업체&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 쿠폰노출&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 실내지도뷰&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+													.form-group
+														| 평가글&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+												.form-row
+													| URL 유무&nbsp;
+													select.form-control(style="width:140px")
+														option(selected) 전체
+														option 1
+													.form-group
+														| 톡톡&nbsp;
+														select.form-control(style="width:120px")
+															option(selected) 전체
+															option 1
+
+							p.text_description.point_color_04  ※ 필요한 데이터 필드값들을 찾아 제목 앞의 체크버튼을 클릭하여 주세요.(단, 카테고리는 제목 아래 존재) ※ '통합ID' 형식의 텍스트파일 업로드
+							.text-center.btn_space_01
+								button.btn.btn-default(type="submit" role="button") 조회
+
+							p.result_number
+								| 검색결과 :
+								span.
+									총 #[strong.point_color_03 785] 건
+							.text-right
+								button.btn.btn-default(role="button") 엑셀다운
+
+							table.table-ibu-default.table-ibu-type1
+								colgroup
+									col(style="width:15%")
+									col(style="width:*")
+									col(style="width:15%")
+									col(style="width:10%")
+									col(style="width:15%")
+								thead
+									tr
+										th 카테고리ID
+										th 카테고리영문경로
+										th 통합ID
+										th 유형
+										th 지역상세ID
+								tbody
+									tr
+										td 534
+										td IIBusiness
+										td 1234567
+										td Site
+										td 0
+									tr
+										td 534
+										td IIBusiness
+										td 1234567
+										td Site
+										td 0
+
+							.paginate.text-center
+								.result_number
+									| 검색결과 :
+									span.
+										총 #[strong.point_color_03 785] 건
+								ul.pagination
+									li.page-item
+										a.page-link(href="#")
+											i.fa.fa-angle-left(aria-hidden="true")
+											span.sr-only 목록에서 이전 페이지로 이동
+									// [MARKUP] 선택된 페이지 비활성화 .disabled 처리
+									li.page-item.disabled
+										a.page-link(href="#") 1
+									li.page-item
+										a.page-link(href="#") 2
+									li.page-item
+										a.page-link(href="#") 3
+									li.page-item
+										a.page-link(href="#") 4
+									li.page-item
+										a.page-link(href="#") 5
+									li.page-item
+										a.page-link(href="#") 6
+									li.page-item
+										a.page-link(href="#") 7
+									li.page-item
+										a.page-link(href="#") 8
+									li.page-item
+										a.page-link(href="#") 9
+									li.page-item
+										a.page-link(href="#" title="다음")
+											i.fa.fa-angle-right(aria-hidden="true")
+											span.sr-only 목록에서 다음 페이지로 이동
+
+
+				footer.main_footer
+					address Copyright © NAVER Corp. All Rights Reserved.
+

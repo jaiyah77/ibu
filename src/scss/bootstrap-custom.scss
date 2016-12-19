@@ -1,0 +1,26 @@
+@import 'import/bootstrap-variables';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+label {
+	margin-bottom: 0;
+	font-weight:normal;
+}
+
+em {
+	font-style: normal;
+}
+
+ul, ol {
+	& {
+		padding: 0;
+	}
+	li {
+		list-style: none;
+	}
+}
+h4 {
+	margin-bottom: 14px;
+}
+
+
+

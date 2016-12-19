@@ -1,0 +1,243 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap
+			//[MARKUP] 토글시 .is_closed 추가
+			aside.aside
+				.aside_logo
+					.logo_naver(title="Naver")
+					.logo_ibu(title="IBU")
+				.aside_toggle
+					button.toggle_button(role="button" aria-label="GNB 접기")
+				menu.aside_menu
+					.menu_list
+						a.menu_item.as_item_01.is_selected(href="#"): span.text 검색
+						.menu_2depth
+							a(href="#"): span.text 통합 데이터다
+							.menu_3depth
+								a(href="#").is_selected: span.text 전체
+								a(href="#"): span.text 사이트+지역
+								a(href="#"): span.text 사이트
+								a(href="#"): span.text 지역
+							a(href="#"): span.text 카테고리
+							.menu_3depth
+								a(href="#"): span.text 카테고리
+						a.menu_item.as_item_02(href="#"): span.text 카테고리
+						a.menu_item.as_item_03(href="#"): span.text 통합데이터
+						a.menu_item.as_item_04(href="#"): span.text 바로가기
+						a.menu_item.as_item_05(href="#"): span.text 요청
+						a.menu_item.as_item_06(href="#"): span.text 통계
+						a.menu_item.as_item_07(href="#"): span.text 기타
+						a.menu_item.as_item_08(href="#"): span.text 브랜드
+				.aside_btns
+					a.anchor(href="#" title="등록"): span.text 통합데이터 등록
+					a.anchor(href="#" title="검색"): span.text 전체 사유 검색하기
+			main.main
+				.main_top
+					.top_left
+						span.top_user
+							span.user_photo
+								img.photo
+							a.user_name(href="#")
+								span.name 박재나
+								span.id (NT111111)
+						i.separator
+						a(href="#") 로그아웃
+						a.top_more(href="#") 서비스목록
+					.top_right
+						a(href="#") IIMS
+						i.separator
+						a(href="#") 브라우저설정
+						i.separator
+						a(href="#") 자주묻는질문
+						i.separator
+						a(href="#") 개인권한
+						i.separator
+						a(href="#") DRT 담당자안내
+						i.separator
+						a.top_more(href="#") 더보기 
+				.container-fluid
+					.row
+						.col-xs-12
+							form.form-inline.text-center
+								.form-group
+									label(for="search_map") 지도검색
+
+									select.form-control(id="search_map" style="width:150px")
+										option(disabled selected) 업체/업종검색
+										option 1
+										option 2
+										option 3
+										option 4
+										option 5
+									input.form-control(type="text" id="" style="width:540px")
+									button.btn.btn-default(type="submit") 검색
+					.row.row_type1
+						.col-xs-12
+							h4 DB간 중복 조회 > DRT VS DRT
+							.search_query
+								form.form-inline
+									.form-group
+										b 중복 유형 타임 &nbsp;
+										select.form-control(style="width:135px")
+											option(selected) 중복 유형 전체
+											option 1
+									.form-group
+										b 검색조건 &nbsp;
+										select.form-control(style="width:135px")
+											option(selected) 업체명
+											option 1
+										select.form-control(style="width:135px")
+											option(selected) begin width
+											option 1
+										input.form-control(type="text" id="" style="width:190px")
+										select.form-control(style="width:150px")
+											option(selected) 중복목록 등록일역순
+											option 1
+									.form-group
+										label
+											b 목록개수 &nbsp;
+											input.form-control(type="text" id="" style="width:60px")
+											span 개
+							.btn_space_01.text-center
+								button.btn.btn-default(role="button" type="submit") 검색
+
+							p.result_number
+								| 기준일 :
+								span.result_date 2016.09.07
+								span.
+									(총 #[strong.point_color_03 4,805])
+							.text-right
+								button.btn.btn-default(role="button") 전체선택
+								button.btn.btn-default(role="button") 일괄삭제
+
+							.drt_wrap
+								.drt_group
+									.drt_item
+										a(href="#") [13080320]
+										a.drt_link1(href="#") 사임당어린이집
+										span.point_color_05 [D]
+										span.point_color_06 [이용자]
+										small 등록,수정: 2009-03-26 12:12:33 (최수영)
+										small 2016-10-10 20:56:48 (박일순)
+										a.drt_link2(href="#") DRT DB 상세보기
+										a.drt_link2(href="#")  홈페이지 열기
+										p
+											span Alias: 사임당어린이집
+											span 대표전화(노출전화): 031-771-6233 ()
+											span 동코드: 0283031021  주소: 경기도 양평군 강상면 병산리 604
+											span 중심좌표: 127.46309 | 37.489676
+											span 교육,학문>영,유아,아동>어린이집>어린이집-일반
+									.drt_item
+										a(href="#") [13080320]
+										a.drt_link1(href="#") 세종어린이집
+										span.point_color_05 [DKP]
+										span.point_color_06 [에디터]
+										small 등록,수정: 2009-03-26 12:12:33 (송금선)
+										small 2016-10-10 20:56:48 (성무근)
+										a.drt_link2(href="#") DRT DB 상세보기
+										a.drt_link2(href="#")  홈페이지 열기
+										p
+											span Alias: 사임당어린이집
+											span 대표전화(노출전화): 031-771-6233 ()
+											span 동코드: 0283031021  주소: 경기도 양평군 강상면 병산리 604
+											span 중심좌표: 127.46309 | 37.489676
+											span 교육,학문>영,유아,아동>어린이집>어린이집-일반
+									.drt_checkbox
+										input(type="checkbox")
+										span [620291]
+										| 중복 유형 :
+										b.code E2
+										span (2016-10-10 21:39:46)
+										button.btn.btn-default(role="button") 목록에서 삭제
+
+								.drt_group
+									.drt_item
+										a(href="#") [13080320]
+										a.drt_link1(href="#") 사임당어린이집
+										span.point_color_05 [D]
+										span.point_color_06 [이용자]
+										small 등록,수정: 2009-03-26 12:12:33 (최수영)
+										small 2016-10-10 20:56:48 (박일순)
+										a.drt_link2(href="#") DRT DB 상세보기
+										a.drt_link2(href="#")  홈페이지 열기
+										p
+											span Alias: 사임당어린이집
+											span 대표전화(노출전화): 031-771-6233 ()
+											span 동코드: 0283031021  주소: 경기도 양평군 강상면 병산리 604
+											span 중심좌표: 127.46309 | 37.489676
+											span 교육,학문>영,유아,아동>어린이집>어린이집-일반
+									.drt_item
+										a(href="#") [13080320]
+										a.drt_link1(href="#") 세종어린이집
+										span.point_color_05 [DKP]
+										span.point_color_06 [에디터]
+										small 등록,수정: 2009-03-26 12:12:33 (송금선)
+										small 2016-10-10 20:56:48 (성무근)
+										a.drt_link2(href="#") DRT DB 상세보기
+										a.drt_link2(href="#")  홈페이지 열기
+										p
+											span Alias: 사임당어린이집
+											span 대표전화(노출전화): 031-771-6233 ()
+											span 동코드: 0283031021  주소: 경기도 양평군 강상면 병산리 604
+											span 중심좌표: 127.46309 | 37.489676
+											span 교육,학문>영,유아,아동>어린이집>어린이집-일반
+									.drt_checkbox
+										input(type="checkbox")
+										span [620291]
+										| 중복 유형 :
+										b.code LN
+										span (2016-10-10 21:39:46)
+										button.btn.btn-default(role="button") 목록에서 삭제
+
+							p.result_number
+								| 기준일 :
+								span.result_date 2016.09.07
+								span.
+									(총 #[strong.point_color_03 4,805])
+							.text-right
+								button.btn.btn-default(role="button") 전체선택
+								button.btn.btn-default(role="button") 일괄삭제
+							.paginate.text-center
+								ul.pagination
+									li.page-item
+										a.page-link(href="#")
+											i.fa.fa-angle-left(aria-hidden="true")
+											span.sr-only 목록에서 이전 페이지로 이동
+									// [MARKUP] 선택된 페이지 비활성화 .disabled 처리
+									li.page-item.disabled
+										a.page-link(href="#") 1
+									li.page-item
+										a.page-link(href="#") 2
+									li.page-item
+										a.page-link(href="#") 3
+									li.page-item
+										a.page-link(href="#") 4
+									li.page-item
+										a.page-link(href="#") 5
+									li.page-item
+										a.page-link(href="#") 6
+									li.page-item
+										a.page-link(href="#") 7
+									li.page-item
+										a.page-link(href="#") 8
+									li.page-item
+										a.page-link(href="#") 9
+									li.page-item
+										a.page-link(href="#" title="다음")
+											i.fa.fa-angle-right(aria-hidden="true")
+											span.sr-only 목록에서 다음 페이지로 이동
+
+
+
+
+
+				footer.main_footer
+					address Copyright © NAVER Corp. All Rights Reserved.
+

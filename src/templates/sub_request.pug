@@ -1,0 +1,328 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap
+			//[MARKUP] 토글시 .is_closed 추가
+			aside.aside
+				.aside_logo
+					.logo_naver(title="Naver")
+					.logo_ibu(title="IBU")
+				.aside_toggle
+					button.toggle_button(role="button" aria-label="GNB 접기")
+				menu.aside_menu
+					.menu_list
+						a.menu_item.as_item_01.is_selected(href="#"): span.text 검색
+						.menu_2depth
+							a(href="#"): span.text 통합 데이터
+							.menu_3depth
+								a(href="#").is_selected: span.text 전체
+								a(href="#"): span.text 사이트+지역
+								a(href="#"): span.text 사이트
+								a(href="#"): span.text 지역
+							a(href="#"): span.text 카테고리
+							.menu_3depth
+								a(href="#"): span.text 카테고리
+						a.menu_item.as_item_02(href="#"): span.text 카테고리
+						a.menu_item.as_item_03(href="#"): span.text 통합데이터
+						a.menu_item.as_item_04(href="#"): span.text 바로가기
+						a.menu_item.as_item_05(href="#"): span.text 요청
+						a.menu_item.as_item_06(href="#"): span.text 통계
+						a.menu_item.as_item_07(href="#"): span.text 기타
+						a.menu_item.as_item_08(href="#"): span.text 브랜드
+				.aside_btns
+					a.anchor(href="#" title="등록"): span.text 통합데이터 등록
+					a.anchor(href="#" title="검색"): span.text 전체 사유 검색하기
+			main.main
+				.main_top
+					.top_left
+						span.top_user
+							span.user_photo
+								img.photo
+							a.user_name(href="#")
+								span.name 박재나
+								span.id (NT111111)
+						i.separator
+						a(href="#") 로그아웃
+						a.top_more(href="#") 서비스목록
+					.top_right
+						a(href="#") IIMS
+						i.separator
+						a(href="#") 브라우저설정
+						i.separator
+						a(href="#") 자주묻는질문
+						i.separator
+						a(href="#") 개인권한
+						i.separator
+						a(href="#") DRT 담당자안내
+						i.separator
+						a.top_more(href="#") 더보기 
+				.container-fluid
+					.row
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 통합데이타
+
+									select.form-control
+										option(disabled selected) 지역상세 ID
+										option 1
+										option 2
+										option 3
+										option 4
+										option 5
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 카테고리
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 지역(주소)
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+
+					.row.row_type1
+						.col-xs-12
+							h4 등록요청 리스트
+							table.table-ibu-default
+								colgroup
+									col(style="width:27%")
+									col(style="width:27%")
+									col(style="width:16%")
+									col(style="width:16%")
+									col(style="width:14%")
+								thead
+									tr
+										th 검토형태
+										th 유형
+										th 접속/모바일
+										th 상태
+										th 광고/중복유형
+								tbody
+									tr
+										td
+											form.form-inline
+												select.form-control(style="width:130px")
+													option(selected) 사이트+지역
+													option 1
+												select.form-control(style="width:130px")
+													option(selected) 서류첨부(어뷰징)
+													option 1
+										td
+											form.form-inline
+												select.form-control(style="width:130px")
+													option(selected) 사이트+지역
+													option 1
+												select.form-control(style="width:130px")
+													option(selected) 서류첨부(어뷰징)
+													option 1
+										td
+											form.form-inline
+												select.form-control
+													option(selected) 정상
+													option 1
+												select.form-control
+													option(selected) 전체
+													option 1
+										td
+											form.form-inline
+												select.form-control(style="width:135px")
+													option(selected) 임시사이트 선택
+													option 1
+										td
+											form.form-inline
+												select.form-control
+													option(selected) 전체
+													option 1
+												select.form-control
+													option(selected) 전체
+													option 1
+							table.table-ibu-default
+								colgroup
+									col(style="width:43%")
+									col(style="width:43%")
+									col(style="width:14%")
+								thead
+									tr
+										th
+											form.form-inline
+												label.radio-inline
+													input(type="radio" name="num-01" checked)
+													| 날짜
+												label.radio-inline
+													input(type="radio" name="num-01" checked)
+													| 순번
+										th 검색조건
+										th 목록
+								tbody
+									tr
+										td
+											form.form-inline
+												select.form-control(style="width:90px")
+													option(selected) 오늘로
+													option 1
+												span.btn_set
+													input.form-control(type="text" id="" style="width:90px")
+													button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+												span ~
+												span.btn_set
+													input.form-control(type="text" id="" style="width:90px")
+													button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+										td
+											form.form-inline
+												select.form-control(style="width:130px")
+													option(selected) PHONE 일치
+													option 1
+												input.form-control(type="text" id="" value="http://" style="width:320px")
+										td
+											form.form-inline
+												select.form-control(style="width:70px")
+													option(selected) 15
+													option 1
+
+							.text-center.btn_space_01
+								button.btn.btn-default(type="reset" role="button") 비우기
+								button.btn.btn-default(type="submit" role="button") 검색
+
+							p.result_number
+								| 검색결과 :
+								span.
+									총 #[strong.point_color_03 785] 건
+							.text-right
+								button.btn.btn-default(role="button") 전체선택
+								button.btn.btn-default(role="button") 선택위임
+
+							table.table-ibu-default.table-ibu-type1
+								colgroup
+									col(style="width:1%")
+									col(style="width:5%")
+									col(style="width:5%")
+									col(style="width:5%")
+									col(style="width:5%")
+									col(style="width:7%")
+									col(style="width:4%")
+									col(style="width:6%")
+									col(style="width:9%")
+									col(style="width:7%")
+									col(style="width:6%")
+									col(style="width:6%")
+									col(style="width:4%")
+									col(style="width:3%")
+									col(style="width:4%")
+									col(style="width:4%")
+									col(style="width:*")
+								thead
+									tr
+										th: input(type="checkbox" id="")
+										th: span.btn_arrow 전화
+												a(href="#a"): span 위로
+												a(href="#b"): span 아래로
+										th 서류
+										th 상태
+										th 검토<br>형태
+										th 카테고리
+										th 중복<br>유형
+										th 제목
+										th 대표키워드
+										th 주소1
+										th 주소2
+										th 주소3
+										th: span.btn_arrow 전화<br>번호
+											a(href="#a").multi_text: span 위로
+											a(href="#b").multi_text: span 아래로
+										th: span.btn_arrow 회원<br>정보
+											a(href="#a").multi_text: span 위로
+											a(href="#b").multi_text: span 아래로
+										th 처리자
+										th 등록요청
+										th 처리
+								tbody
+									tr
+										td: input(type="checkbox" id="")
+										td 4892030
+										td 첨부
+										td 대기
+										td 지역
+										td.text-left 에어컨
+										td 중복아님
+										td.text-left 아수스에어컨
+										td.text-left 에어컨설치;냉난방기설치;시스템에어컨;중고에어컨;에어컨가스충전
+										td.text-left 충청북도 청주시 상당구 용정동
+										td.text-left 123
+										td.text-left 가나빌딩1층
+										td 043-123-4567
+										td **abcd**
+										td -
+										td 2016.10.14
+										td
+											button.btn.btn-default(role="button") 등록
+											button.btn.btn-default(role="button") 보류
+									tr
+										td: input(type="checkbox" id="")
+										td 4893852
+										td 첨부
+										td 대기
+										td 지역
+										td.text-left 부동산-일반
+										td 중복아님
+										td.text-left 목화부동산
+										td.text-left 부산부동산;황정순;광안동;부동산;공인중개사
+										td.text-left 부산광역시 수영구 광안동 1058-5
+										td.text-left 1234-5
+										td.text-left 다라빌딩1층
+										td 043-123-4567
+										td **123450**
+										td -
+										td 2016.10.14
+										td
+											button.btn.btn-default(role="button") 등록
+											button.btn.btn-default(role="button") 보류
+
+							.paginate.text-center
+								p.result_number
+									| 검색결과 :
+									span.
+										총 #[strong.point_color_03 785] 건
+								ul.pagination
+									li.page-item
+										a.page-link(href="#")
+											i.fa.fa-angle-left(aria-hidden="true")
+											span.sr-only 목록에서 이전 페이지로 이동
+									// [MARKUP] 선택된 페이지 비활성화 .disabled 처리
+									li.page-item.disabled
+										a.page-link(href="#") 1
+									li.page-item
+										a.page-link(href="#") 2
+									li.page-item
+										a.page-link(href="#") 3
+									li.page-item
+										a.page-link(href="#") 4
+									li.page-item
+										a.page-link(href="#") 5
+									li.page-item
+										a.page-link(href="#") 6
+									li.page-item
+										a.page-link(href="#") 7
+									li.page-item
+										a.page-link(href="#") 8
+									li.page-item
+										a.page-link(href="#") 9
+									li.page-item
+										a.page-link(href="#" title="다음")
+											i.fa.fa-angle-right(aria-hidden="true")
+											span.sr-only 목록에서 다음 페이지로 이동
+
+
+				footer.main_footer
+					address Copyright © NAVER Corp. All Rights Reserved.
+

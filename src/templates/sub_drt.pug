@@ -1,0 +1,290 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap
+			//[MARKUP] 토글시 .is_closed 추가
+			aside.aside
+				.aside_logo
+					.logo_naver(title="Naver")
+					.logo_ibu(title="IBU")
+				.aside_toggle
+					button.toggle_button(role="button" aria-label="GNB 접기")
+				menu.aside_menu
+					.menu_list
+						a.menu_item.as_item_01.is_selected(href="#"): span.text 검색
+						.menu_2depth
+							a(href="#"): span.text 통합 데이터
+							.menu_3depth
+								a(href="#").is_selected: span.text 전체
+								a(href="#"): span.text 사이트+지역
+								a(href="#"): span.text 사이트
+								a(href="#"): span.text 지역
+							a(href="#"): span.text 카테고리
+							.menu_3depth
+								a(href="#"): span.text 카테고리
+						a.menu_item.as_item_02(href="#"): span.text 카테고리
+						a.menu_item.as_item_03(href="#"): span.text 통합데이터
+						a.menu_item.as_item_04(href="#"): span.text 바로가기
+						a.menu_item.as_item_05(href="#"): span.text 요청
+						a.menu_item.as_item_06(href="#"): span.text 통계
+						a.menu_item.as_item_07(href="#"): span.text 기타
+						a.menu_item.as_item_08(href="#"): span.text 브랜드
+				.aside_btns
+					a.anchor(href="#" title="등록"): span.text 통합데이터 등록
+					a.anchor(href="#" title="검색"): span.text 전체 사유 검색하기
+			main.main
+				.main_top
+					.top_left
+						span.top_user
+							span.user_photo
+								img.photo
+							a.user_name(href="#")
+								span.name 박재나
+								span.id (NT111111)
+						i.separator
+						a(href="#") 로그아웃
+						a.top_more(href="#") 서비스목록
+					.top_right
+						a(href="#") IIMS
+						i.separator
+						a(href="#") 브라우저설정
+						i.separator
+						a(href="#") 자주묻는질문
+						i.separator
+						a(href="#") 개인권한
+						i.separator
+						a(href="#") DRT 담당자안내
+						i.separator
+						a.top_more(href="#") 더보기 
+				.container-fluid
+					.row
+						.col-xs-12
+							form.form-inline.text-center
+								.form-group
+									label(for="search_map") 지도검색
+
+									select.form-control(id="search_map" style="width:150px")
+										option(disabled selected) 업체/업종검색
+										option 1
+										option 2
+										option 3
+										option 4
+										option 5
+									input.form-control(type="text" id="" style="width:540px")
+									button.btn.btn-default(type="submit") 검색
+					
+					.row
+						.col-xs-12
+							h4 정보수정제안
+							// [MARKUP 탭활성화 클래스 .is_active]
+							ul.tab_ibu.clearfix
+								li.is_active: a(href="#none") 처리하기(미검수)
+								li: a(href="#none") 연동DB
+								li: a(href="#none") 홀딩중
+								li: a(href="#none") 수정
+								li: a(href="#none") 삭제
+								li: a(href="#none") 신규등록
+								li: a(href="#none") 일시정지
+								li: a(href="#none") 처리불가
+
+							table.table-ibu-default
+								colgroup
+									col(style="width:100%")
+								tbody
+									tr.table_row_bg
+										td.text-left
+											form.form-inline
+												.form-group
+													strong.table_space 기간선택
+													span.btn_set
+														input.form-control(type="text" id="" style="width:90px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+													span ~
+													span.btn_set.table_space
+														input.form-control(type="text" id="" style="width:90px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+													input.form-control(type="text" id="" placeholder="00:00" style="width:60px")
+													| &nbsp;~
+													input.form-control(type="text" id="" placeholder="00:00" style="width:60px")
+												.form-group
+													strong.table_space 장치
+													select.form-control(style="width:135px")
+														option(selected) 전체
+														option 1
+												.form-group
+													strong.table_space 구분
+													select.form-control(style="width:155px")
+														option(selected) 업체정보 없음(폐업)
+														option 1
+												.form-group
+													strong.table_space 업체상태
+													select.form-control(style="width:135px")
+														option(selected) 미삭제
+														option 1
+									tr.table_row_bg
+										td.text-left
+											form.form-inline
+												.form-group
+													strong.table_space 검색 키워드
+													select.form-control(style="width:130px")
+														option(selected) 전체
+														option 1
+													select.form-control(style="width:130px")
+														option(selected) =
+														option 1
+													input.form-control(type="text" id="" style="width:555px")
+												.form-group
+													strong.table_space 목록개수
+													input.form-control(type="text" id="" style="width:60px")
+													| &nbsp;개
+
+							.text-center.btn_space_01
+								button.btn.btn-default(type="submit" role="button") 검색
+
+							p.result_number
+								| 검색결과 :
+								span.
+									총 #[strong.point_color_03 785] 건
+								button.btn.btn-default(role="button") 삭제완료
+								button.btn.btn-default(role="button") 수정완료
+								button.btn.btn-default(role="button") 일시정지 완료
+								button.btn.btn-default(role="button") 신규등록 완료
+								button.btn.btn-default(role="button") 처리불가
+								button.btn.btn-default(role="button") 타입변경
+								button.btn.btn-default(role="button") 홀딩
+							.text-right.btn_fix1
+								button.btn.btn-default(role="button") 엑셀다운
+
+							table.table-ibu-default.table-ibu-type1
+								colgroup
+									col(style="width:1%")
+									col(style="width:8%")
+									col(style="width:5%")
+									col(style="width:12%")
+									col(style="width:4%")
+									col(style="width:6%")
+									col(style="width:6%")
+									col(style="width:7%")
+									col(style="width:8%")
+									col(style="width:*")
+									col(style="width:5%")
+									col(style="width:6%")
+									col(style="width:6%")
+									col(style="width:9%")
+									col(style="width:5%")
+								thead
+									tr
+										th: input(type="checkbox" id="")
+										th: span.btn_arrow 인입일시
+												a(href="#a"): span 위로
+												a(href="#b"): span 아래로
+										th: span.btn_arrow 구분
+												a(href="#a"): span 위로
+												a(href="#b"): span 아래로
+										th 신고사유<br>(잘못된 정보 설명)
+										th: span.btn_arrow 통합<br>유형
+												a(href="#a").multi_text: span 위로
+												a(href="#b").multi_text: span 아래로
+										th: span.btn_arrow 지역<br>ID
+												a(href="#a").multi_text: span 위로
+												a(href="#b").multi_text: span 아래로
+										th: span.btn_arrow 상태
+												a(href="#a"): span 위로
+												a(href="#b"): span 아래로
+										th: span.btn_arrow 업체명
+												a(href="#a"): span 위로
+												a(href="#b"): span 아래로
+										th: span.btn_arrow 전호번호
+												a(href="#a"): span 위로
+												a(href="#b"): span 아래로
+										th: span.btn_arrow 주소
+												a(href="#a"): span 위로
+												a(href="#b"): span 아래로
+										th 장치
+										th 홈페이지
+										th 이메일
+										th 처리날짜
+										th 이메일<br>조회
+								tbody
+									tr
+										td: input(type="checkbox" id="")
+										td.text-left 2016-10-07 10:19:12
+										td 기타
+										td.text-left - 기타요청: -> 매`주 수요일 휴무예요~
+										td DKP
+										td
+											span.point_color_03 11785758 <br>
+											| (P:4279905)
+										td 정상
+										td.text-left 화성시 동부보건지소
+										td.text-left 070-1234-5678
+										td.text-left 경기도 화성시 병점동 400-6 경기도 화성시 떡전골로 72-3
+										td.text-left Mobile
+										td.text-left http://hansol.gwe.es.kr/
+										td.text-left daechan_lee@naver.com
+										td 2016.10.05
+										td
+											button.btn.btn-default(role="button") 조회
+									tr
+										td: input(type="checkbox" id="")
+										td.text-left 2016-10-07 10:19:12
+										td 위치(주소)
+										td.text-left - 장소명:그나무별도 -> 그나무별도 도자기공방 -기타요청: ->주차가능. 오픈시간:오전10시~ 오후9시
+										td DKP
+										td
+											span.point_color_03 11785758
+										td 정상
+										td.text-left 강릉한솔초등학교
+										td.text-left 070-1234-5678
+										td.text-left 강원도 강릉시 포남동 1296 강원도 강릉시 하평2길 45
+										td.text-left Mobile
+										td.text-left http://hansol.gwe.es.kr/
+										td.text-left worudehfdkf@naver.com
+										td 2016.10.05
+										td
+											button.btn.btn-default(role="button") 조회
+
+							.paginate.text-center
+								.result_number
+									| 검색결과 :
+									span.
+										총 #[strong.point_color_03 785] 건
+								ul.pagination
+									li.page-item
+										a.page-link(href="#")
+											i.fa.fa-angle-left(aria-hidden="true")
+											span.sr-only 목록에서 이전 페이지로 이동
+									// [MARKUP] 선택된 페이지 비활성화 .disabled 처리
+									li.page-item.disabled
+										a.page-link(href="#") 1
+									li.page-item
+										a.page-link(href="#") 2
+									li.page-item
+										a.page-link(href="#") 3
+									li.page-item
+										a.page-link(href="#") 4
+									li.page-item
+										a.page-link(href="#") 5
+									li.page-item
+										a.page-link(href="#") 6
+									li.page-item
+										a.page-link(href="#") 7
+									li.page-item
+										a.page-link(href="#") 8
+									li.page-item
+										a.page-link(href="#") 9
+									li.page-item
+										a.page-link(href="#" title="다음")
+											i.fa.fa-angle-right(aria-hidden="true")
+											span.sr-only 목록에서 다음 페이지로 이동
+
+
+				footer.main_footer
+					address Copyright © NAVER Corp. All Rights Reserved.
+

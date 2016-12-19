@@ -1,0 +1,168 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap_popup(style="")
+			main.popup
+				.popup_top
+					.top_left
+						h2.top_title 카테고리 검색
+					.top_right
+						button.top_close(role="button" aria-lable="닫기")
+
+				.container-fluid
+					.row.popup_search_wrap
+						.col-xs-5
+							form.form-inline
+								.pop_form_search
+									input.form-control(type="text" style="width:100%")
+									button.btn.btn-default.btn_search(role="button" type="submit") 검색
+
+							// [MARKUP 탭활성화 클래스 .is_active]
+							ul.tab_ibu.clearfix
+								li.is_active: a(href="#none") 사이트 카테고리
+								li: a(href="#none") 지도지역 카테고리
+
+							.tree_ibu_wrap
+								ul
+									li
+										a(href="#"): span.text 문화, 예술
+											span.category (공공/학교)
+										span.point_color_03 [사이트]
+									// [MARKUP] 하위 메뉴가 있는 경우 선택하면 아이콘 활성화(-) .is_selected
+									li.is_selected
+										a(href="#"): span.text 인물,사람들
+											span.category (이슈)
+										span.point_color_03 [사이트]
+										ul.tree_2depth
+											li
+												a(href="#"): szpan.text 개인 홈페이지
+													span.category (이슈)
+												span.point_color_03 [사이트]
+											li.is_selected
+												a(href="#"): szpan.text 코미디언, 개그맨
+													span.category (이슈)
+												span.point_color_03 [사이트]
+												ul.tree_3depth
+													// [MARKUP] 하위메뉴가 없는 경우 .no_depth 추가
+													li.no_depth
+														a(href="#"): span.text 남희석
+															span.category (이슈)
+														span.point_color_03 [사이트]
+													li.no_depth
+														a(href="#"): span.text 박경림
+															span.category (이슈)
+														span.point_color_03 [사이트]
+													li.no_depth
+														a(href="#"): span.text 심현섭
+															span.category (이슈)
+														span.point_color_03 [사이트]
+													li.no_depth
+														a(href="#"): span.text 강성범
+															span.category (이슈)
+														span.point_color_03 [사이트]
+													li.is_selected
+														a(href="#"): span.text 왕가
+															span.category (이슈)
+														span.point_color_03 [사이트]
+														ul.tree_4depth
+															li
+																a(href="#"): span.text 모나코
+																	span.category (이슈)
+																span.point_color_03 [사이트]
+															li
+																a(href="#"): span.text 영국
+																	span.category (이슈)
+																span.point_color_03 [사이트]
+															li.is_selected
+																a(href="#"): span.text 스페인
+																	span.category (이슈)
+																span.point_color_03 [사이트]
+																ul.tree_5depth
+																	li.no_depth
+																		a(href="#"): span.text 후안 카를로스
+																			span.category (이슈)
+																		span.point_color_03 [사이트]
+									li
+										a(href="#"): span.text 뉴스, 미디어
+											span.category (공공/학교)
+										span.point_color_03 [사이트]
+									li
+										a(href="#"): span.text 게임
+											span.category (이슈)
+										span.point_color_03 [사이트]
+									li
+										a(href="#"): span.text 레저, 스포츠
+											span.category (이슈)
+										span.point_color_03 [사이트]
+									li
+										a(href="#"): span.text 경영, 재태크
+											span.category (공공/학교)
+										span.point_color_03 [사이트]
+
+						.col-xs-7
+							h3.table-title 검색결과
+							.text-right
+								span.total 전체 <strong class="point_color_03">785</strong>&nbsp;건
+							.popup_search_result
+								ul
+									li
+										button.btn.btn-default.btn_select(role="button") 선택
+										a(href="#none") 인물,사람들 > 노동운동가
+											span (이슈)
+									li
+										button.btn.btn-default.btn_select(role="button") 선택
+										a(href="#none") 인물, 사람들 > 코미디언, 개그맨 > 박준형
+											span (이슈)
+									li
+										button.btn.btn-default.btn_select(role="button") 선택
+										a(href="#none") 인물, 사람들 > 경영컨설턴트
+											span (이슈)
+									li
+										button.btn.btn-default.btn_select(role="button") 선택
+										a(href="#none") 엔터테인먼트 > 방송프로그램 > TV 프로그램 > CARTOON NETWORK
+											span (이슈)
+									li
+										button.btn.btn-default.btn_select(role="button") 선택
+										a(href="#none") 컴퓨터, 인터넷 > 채팅, 대화 > 통신언어, 채팅용어
+											span (이슈)
+
+							.paginate.text-center
+								ul.pagination
+									li.page-ITEM
+										a.page-link(href="#")
+											i.fa.fa-angle-left(aria-hidden="true")
+											span.sr-only 목록에서 이전 페이지로 이동
+									// [MARKUP] 선택된 페이지 비활성화 .disabled 처리
+									li.page-item.disabled
+										a.page-link(href="#") 1
+									li.page-item
+										a.page-link(href="#") 2
+									li.page-item
+										a.page-link(href="#") 3
+									li.page-item
+										a.page-link(href="#") 4
+									li.page-item
+										a.page-link(href="#") 5
+									li.page-item
+										a.page-link(href="#") 6
+									li.page-item
+										a.page-link(href="#") 7
+									li.page-item
+										a.page-link(href="#") 8
+									li.page-item
+										a.page-link(href="#") 9
+									li.page-item
+										a.page-link(href="#") 10
+									li.page-item
+										a.page-link(href="#" title="다음")
+											i.fa.fa-angle-right(aria-hidden="true")
+											span.sr-only 목록에서 다음 페이지로 이동
+
+				footer.popup_footer
+					button.btn.btn-default(type="button" role="button") 닫기

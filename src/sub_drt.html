@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>IBU</title>
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/ibu.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<!--[MARKUP] 토글시 .is_closed 추가-->
+			<aside class="aside">
+				<div class="aside_logo">
+					<div class="logo_naver" title="Naver"></div>
+					<div class="logo_ibu" title="IBU"></div>
+				</div>
+				<div class="aside_toggle">
+					<button class="toggle_button" role="button" aria-label="GNB 접기"></button>
+				</div>
+				<menu class="aside_menu">
+					<div class="menu_list">
+						<a class="menu_item as_item_01 is_selected" href="#">
+							<span class="text">검색</span>
+						</a>
+						<div class="menu_2depth">
+							<a href="#">
+								<span class="text">통합 데이터</span>
+							</a>
+							<div class="menu_3depth">
+								<a class="is_selected" href="#">
+									<span class="text">전체</span>
+								</a>
+								<a href="#">
+									<span class="text">사이트+지역</span>
+								</a>
+								<a href="#">
+									<span class="text">사이트</span>
+								</a>
+								<a href="#">
+									<span class="text">지역</span>
+								</a>
+							</div>
+							<a href="#">
+								<span class="text">카테고리</span>
+							</a>
+							<div class="menu_3depth">
+								<a href="#">
+									<span class="text">카테고리</span>
+								</a>
+							</div>
+						</div>
+						<a class="menu_item as_item_02" href="#">
+							<span class="text">카테고리</span>
+						</a>
+						<a class="menu_item as_item_03" href="#">
+							<span class="text">통합데이터</span>
+						</a>
+						<a class="menu_item as_item_04" href="#">
+							<span class="text">바로가기</span>
+						</a>
+						<a class="menu_item as_item_05" href="#">
+							<span class="text">요청</span>
+						</a>
+						<a class="menu_item as_item_06" href="#">
+							<span class="text">통계</span>
+						</a>
+						<a class="menu_item as_item_07" href="#">
+							<span class="text">기타</span>
+						</a>
+						<a class="menu_item as_item_08" href="#">
+							<span class="text">브랜드</span>
+						</a>
+					</div>
+				</menu>
+				<div class="aside_btns">
+					<a class="anchor" href="#" title="등록">
+						<span class="text">통합데이터 등록</span>
+					</a>
+					<a class="anchor" href="#" title="검색">
+						<span class="text">전체 사유 검색하기</span>
+					</a>
+				</div>
+			</aside>
+			<main class="main">
+				<div class="main_top">
+					<div class="top_left">
+						<span class="top_user">
+							<span class="user_photo">
+								<img class="photo">
+							</span>
+							<a class="user_name" href="#">
+								<span class="name">박재나</span>
+								<span class="id">(NT111111)</span>
+							</a>
+						</span>
+						<i class="separator"></i>
+						<a href="#">로그아웃</a>
+						<a class="top_more" href="#">서비스목록</a>
+					</div>
+					<div class="top_right">
+						<a href="#">IIMS</a>
+						<i class="separator"></i>
+						<a href="#">브라우저설정</a>
+						<i class="separator"></i>
+						<a href="#">자주묻는질문</a>
+						<i class="separator"></i>
+						<a href="#">개인권한</a>
+						<i class="separator"></i>
+						<a href="#">DRT 담당자안내</a>
+						<i class="separator"></i>
+						<a class="top_more" href="#">더보기 </a>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-12">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="search_map">지도검색</label>
+									<select class="form-control" id="search_map" style="width:150px">
+										<option disabled selected>업체/업종검색</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									<input class="form-control" type="text" id="" style="width:540px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<h4>정보수정제안</h4>
+							<!-- [MARKUP 탭활성화 클래스 .is_active]-->
+							<ul class="tab_ibu clearfix">
+								<li class="is_active">
+									<a href="#none">처리하기(미검수)</a>
+								</li>
+								<li>
+									<a href="#none">연동DB</a>
+								</li>
+								<li>
+									<a href="#none">홀딩중</a>
+								</li>
+								<li>
+									<a href="#none">수정</a>
+								</li>
+								<li>
+									<a href="#none">삭제</a>
+								</li>
+								<li>
+									<a href="#none">신규등록</a>
+								</li>
+								<li>
+									<a href="#none">일시정지</a>
+								</li>
+								<li>
+									<a href="#none">처리불가</a>
+								</li>
+							</ul>
+							<table class="table-ibu-default">
+								<colgroup>
+									<col style="width:100%">
+								</colgroup>
+								<tbody>
+									<tr class="table_row_bg">
+										<td class="text-left">
+											<form class="form-inline">
+												<div class="form-group">
+													<strong class="table_space">기간선택</strong>
+													<span class="btn_set">
+														<input class="form-control" type="text" id="" style="width:90px">
+														<button class="btn btn-default btn-calendar" role="button" aria-label="캘린더"></button>
+													</span>
+													<span>~</span>
+													<span class="btn_set table_space">
+														<input class="form-control" type="text" id="" style="width:90px">
+														<button class="btn btn-default btn-calendar" role="button" aria-label="캘린더"></button>
+													</span>
+													<input class="form-control" type="text" id="" placeholder="00:00" style="width:60px">&nbsp;~
+													<input class="form-control" type="text" id="" placeholder="00:00" style="width:60px">
+												</div>
+												<div class="form-group">
+													<strong class="table_space">장치</strong>
+													<select class="form-control" style="width:135px">
+														<option selected>전체</option>
+														<option>1</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<strong class="table_space">구분</strong>
+													<select class="form-control" style="width:155px">
+														<option selected>업체정보 없음(폐업)</option>
+														<option>1</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<strong class="table_space">업체상태</strong>
+													<select class="form-control" style="width:135px">
+														<option selected>미삭제</option>
+														<option>1</option>
+													</select>
+												</div>
+											</form>
+										</td>
+									</tr>
+									<tr class="table_row_bg">
+										<td class="text-left">
+											<form class="form-inline">
+												<div class="form-group">
+													<strong class="table_space">검색 키워드</strong>
+													<select class="form-control" style="width:130px">
+														<option selected>전체</option>
+														<option>1</option>
+													</select>
+													<select class="form-control" style="width:130px">
+														<option selected>=</option>
+														<option>1</option>
+													</select>
+													<input class="form-control" type="text" id="" style="width:555px">
+												</div>
+												<div class="form-group">
+													<strong class="table_space">목록개수</strong>
+													<input class="form-control" type="text" id="" style="width:60px">&nbsp;개</div>
+											</form>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="text-center btn_space_01">
+								<button class="btn btn-default" type="submit" role="button">검색</button>
+							</div>
+							<p class="result_number">검색결과 :
+								<span>총
+									<strong class="point_color_03">785</strong> 건</span>
+								<button class="btn btn-default" role="button">삭제완료</button>
+								<button class="btn btn-default" role="button">수정완료</button>
+								<button class="btn btn-default" role="button">일시정지 완료</button>
+								<button class="btn btn-default" role="button">신규등록 완료</button>
+								<button class="btn btn-default" role="button">처리불가</button>
+								<button class="btn btn-default" role="button">타입변경</button>
+								<button class="btn btn-default" role="button">홀딩</button>
+							</p>
+							<div class="text-right btn_fix1">
+								<button class="btn btn-default" role="button">엑셀다운</button>
+							</div>
+							<table class="table-ibu-default table-ibu-type1">
+								<colgroup>
+									<col style="width:1%">
+									<col style="width:8%">
+									<col style="width:5%">
+									<col style="width:12%">
+									<col style="width:4%">
+									<col style="width:6%">
+									<col style="width:6%">
+									<col style="width:7%">
+									<col style="width:8%">
+									<col style="width:*">
+									<col style="width:5%">
+									<col style="width:6%">
+									<col style="width:6%">
+									<col style="width:9%">
+									<col style="width:5%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>
+											<input type="checkbox" id="">
+										</th>
+										<th>
+											<span class="btn_arrow">인입일시
+												<a href="#a">
+													<span>위로</span>
+												</a>
+												<a href="#b">
+													<span>아래로</span>
+												</a>
+											</span>
+										</th>
+										<th>
+											<span class="btn_arrow">구분
+												<a href="#a">
+													<span>위로</span>
+												</a>
+												<a href="#b">
+													<span>아래로</span>
+												</a>
+											</span>
+										</th>
+										<th>신고사유
+											<br>(잘못된 정보 설명)</th>
+										<th>
+											<span class="btn_arrow">통합
+												<br>유형
+												<a class="multi_text" href="#a">
+													<span>위로</span>
+												</a>
+												<a class="multi_text" href="#b">
+													<span>아래로</span>
+												</a>
+											</span>
+										</th>
+										<th>
+											<span class="btn_arrow">지역
+												<br>ID
+												<a class="multi_text" href="#a">
+													<span>위로</span>
+												</a>
+												<a class="multi_text" href="#b">
+													<span>아래로</span>
+												</a>
+											</span>
+										</th>
+										<th>
+											<span class="btn_arrow">상태
+												<a href="#a">
+													<span>위로</span>
+												</a>
+												<a href="#b">
+													<span>아래로</span>
+												</a>
+											</span>
+										</th>
+										<th>
+											<span class="btn_arrow">업체명
+												<a href="#a">
+													<span>위로</span>
+												</a>
+												<a href="#b">
+													<span>아래로</span>
+												</a>
+											</span>
+										</th>
+										<th>
+											<span class="btn_arrow">전호번호
+												<a href="#a">
+													<span>위로</span>
+												</a>
+												<a href="#b">
+													<span>아래로</span>
+												</a>
+											</span>
+										</th>
+										<th>
+											<span class="btn_arrow">주소
+												<a href="#a">
+													<span>위로</span>
+												</a>
+												<a href="#b">
+													<span>아래로</span>
+												</a>
+											</span>
+										</th>
+										<th>장치</th>
+										<th>홈페이지</th>
+										<th>이메일</th>
+										<th>처리날짜</th>
+										<th>이메일
+											<br>조회</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type="checkbox" id="">
+										</td>
+										<td class="text-left">2016-10-07 10:19:12</td>
+										<td>기타</td>
+										<td class="text-left">- 기타요청: -> 매`주 수요일 휴무예요~</td>
+										<td>DKP</td>
+										<td>
+											<span class="point_color_03">11785758
+												<br>
+											</span>(P:4279905)</td>
+										<td>정상</td>
+										<td class="text-left">화성시 동부보건지소</td>
+										<td class="text-left">070-1234-5678</td>
+										<td class="text-left">경기도 화성시 병점동 400-6 경기도 화성시 떡전골로 72-3</td>
+										<td class="text-left">Mobile</td>
+										<td class="text-left">http://hansol.gwe.es.kr/</td>
+										<td class="text-left">daechan_lee@naver.com</td>
+										<td>2016.10.05</td>
+										<td>
+											<button class="btn btn-default" role="button">조회</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="">
+										</td>
+										<td class="text-left">2016-10-07 10:19:12</td>
+										<td>위치(주소)</td>
+										<td class="text-left">- 장소명:그나무별도 -> 그나무별도 도자기공방 -기타요청: ->주차가능. 오픈시간:오전10시~ 오후9시</td>
+										<td>DKP</td>
+										<td>
+											<span class="point_color_03">11785758</span>
+										</td>
+										<td>정상</td>
+										<td class="text-left">강릉한솔초등학교</td>
+										<td class="text-left">070-1234-5678</td>
+										<td class="text-left">강원도 강릉시 포남동 1296 강원도 강릉시 하평2길 45</td>
+										<td class="text-left">Mobile</td>
+										<td class="text-left">http://hansol.gwe.es.kr/</td>
+										<td class="text-left">worudehfdkf@naver.com</td>
+										<td>2016.10.05</td>
+										<td>
+											<button class="btn btn-default" role="button">조회</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="paginate text-center">
+								<div class="result_number">검색결과 :
+									<span>총
+										<strong class="point_color_03">785</strong> 건</span>
+								</div>
+								<ul class="pagination">
+									<li class="page-item">
+										<a class="page-link" href="#">
+											<i class="fa fa-angle-left" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 이전 페이지로 이동</span>
+										</a>
+									</li>
+									<!-- [MARKUP] 선택된 페이지 비활성화 .disabled 처리-->
+									<li class="page-item disabled">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">4</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">5</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">6</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">7</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">8</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">9</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#" title="다음">
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 다음 페이지로 이동</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="main_footer">
+					<address>Copyright © NAVER Corp. All Rights Reserved.</address>
+				</footer>
+			</main>
+		</div>
+	</body>
+</html>

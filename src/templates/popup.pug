@@ -1,0 +1,812 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap_popup
+			main.popup
+				.popup_top
+					.top_left
+						h2.top_title 통합데이터 등록<small>(일반)</small>
+					.top_right
+						button.top_close(role="button" aria-lable="닫기")
+				.container-fluid
+					.row
+						.col-xs-12
+							h3.table-title 기본정보
+							table.table.table-ibu-popup
+								colgroup
+									col(style="width:150px")
+									col
+								tr
+									th DB Type
+									td
+										form.form-inline
+											.form-group
+												label.radio-inline
+													input(type="radio" id="" name="inline-radio-01" checked="checked")
+													| 사이트+지역
+												label.radio-inline
+													input(type="radio" id="" name="inline-radio-01" )
+													| 사이트
+												label.radio-inline
+													input(type="radio" id="" name="inline-radio-01" )
+													| 지역
+											.form-group
+												label.checkbox-inline
+													input(type="checkbox" id="" )
+													| SPOT
+								tr
+									th 등록형식
+									td
+										form.form-inline
+											.form-group
+												select.form-control
+													option(selected) 에디터
+													option 1
+											.form-group
+												label.checkbox-inline
+													input(type="checkbox")
+													| 커뮤니티
+											.form-group
+												select.form-control
+													option(selected) 대표번호 이외의 ARS 관리권한 요청 제한
+													option 1
+											.form-group
+												span 관리권한 신청 불가 선택
+											.form-group
+												label.checkbox-inline
+													input(type="checkbox" disabled="disabled")
+													| 이용자편집
+								tr
+									th 카테고리
+									td
+										form.form-inline
+											.form-row
+												.form-group
+													button.btn.btn-default(role="button") 필드추가
+													button.btn.btn-default(role="button") 필드삭제
+											.form-row
+												.form-group
+													input.form-control(type="text" id="" style="width:60px")
+													input.form-control(type="text" id="" style="width:60px")
+													input.form-control(type="text" id="" style="width:180px")
+													label.checkbox-inline
+														input(type="checkbox" disabled)
+														| 지역&nbsp;
+													button.btn.btn-default(role="button") 검색
+													button.btn.btn-default(role="button") 열기
+													button.btn.btn-default(role="button") 서비스
+													button.btn.btn-default(role="button") 리셋
+													span.btn_set
+														button.btn.btn-default.btn-up(role="button" aria-label="위로")
+														button.btn.btn-default.btn-down(role="button" aria-label="아래로")
+													button.btn.btn-default(role="button") 기준
+								tr
+									th 카테고리 키워드
+									td
+								tr
+									th 사이트명
+									td
+										form.form-inline
+											.form-row
+												.form-group
+													input.form-control(type="text" id="" style="width:450px")
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" checked="checked")
+														| 검색우선반영
+												.form-group
+													button.btn.btn-default(role="button") 중복체크 확인
+											.form-row
+												.form-group
+													label
+														span.space_right_small 이전제목
+														input.form-control(type="text" id="" style="width:219px")
+												.form-group
+													span.space_right_small 유효기간
+													span.btn_set
+														input.form-control(type="text" id="" style="width:100px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+													span ~
+													span.btn_set
+														input.form-control(type="text" id="" style="width:100px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" checked)
+														| 계속반영
+											.form-row
+												.form-group
+													label
+														span.space_right_small 유형
+														input.form-control(type="text" id="" style="width:241px")
+								tr
+									th 사이트 alias
+									td
+										form.form-inline
+											.form-row.textarea_place
+												textarea.form-control(style="width:100%")
+											.form-row
+												.form-group
+													button.btn.btn-default.space_right_small(role="button") 색인어 추천
+													small 세미콜론(;)으로 구분
+								tr
+									th 사이트 BlackKeyword
+									td
+										form.form-inline
+											.form-row.textarea_place
+												textarea.form-control(style="width:100%")
+											.form-row
+												.form-group
+													small 복수일 경우 세미콜론(;)으로구분
+								tr
+									th URL
+									td
+										form.form-inline
+											.form-row
+												.form-group
+													input.form-control(type="text" style="width:466px")
+													button.btn.btn-default(role="button") 열기
+													button.btn.btn-default(role="button") 중복체크
+													button.btn.btn-default(role="button") 유니코드 전환
+											.form-row
+												.form-group
+													button.btn.btn-default(role="button") 관련URL추가
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 자동추출키워드
+								tr
+									th 노출 URL
+									td
+										form.form-inline
+											.form-group
+												input.form-control(type="text" style="width:466px")
+												button.btn.btn-default(role="button") 관련URL추가
+								tr
+									th 업체명(상호)
+									td
+										form.form-inline
+											.form-group
+												input.form-control(type="text" style="width:466px")
+												button.btn.btn-default 중복체크
+											.form-group
+												label.checkbox-inline
+													input(type="checkbox" id="")
+													| 사이트명, 업체명 동일
+								tr
+									th 업체명 유의어(영/한)
+									td
+										form.form-inline
+											.form-group
+												input.form-control(type="text" style="width:466px")
+								tr
+									th 업체명 alias
+									td
+										form.form-inline
+											.form-row.textarea_place
+												textarea.form-control(style="width:100%")
+											.form-row
+												.form-group
+													small 복수일 경우 세미콜론(;)으로구분
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 사이트명 alias 동일
+								tr
+									th 지역 FamousKeyword
+									td
+										form.form-inline
+											.form-row.textarea_place
+												textarea.form-control(style="width:100%")
+											.form-row
+												.form-group
+													small 복수일 경우 세미콜론(;)으로구분
+												.form-group
+													small ※사이트 타입일 경우 데이터 반영안됨
+								tr
+									th 대표 전화번호
+									td
+										form.form-inline
+											.form-group
+												input.form-control(type="text" style="170px")
+												button.btn.btn-default 중복체크
+											.form-group
+												label.checkbox-inline
+													input(type="checkbox" id="")
+													| 전화번호 임의생성
+											.form-group
+												small ※'-'를 포함한 숫자들로 최대 20자까지 허용합니다.
+								tr
+									th 노출 전화번호
+									td
+										form.form-inline
+											.form-group
+												input.form-control(type="text" style="width:170px")
+								tr
+									th 지역 대표키워드
+									td
+										form.form-inline
+											.form-group
+												input.form-control(type="text" style="width:130px")
+												input.form-control(type="text" style="width:130px")
+												input.form-control(type="text" style="width:130px")
+												input.form-control(type="text" style="width:130px")
+												input.form-control(type="text" style="width:130px")
+								tr
+									th 사이트 설명
+									td
+										form.form-inline
+											.form-row.textarea_place
+												textarea.form-control(style="width:100%")
+											.form-row
+												.form-group
+													small [
+														span.point_color_01 59
+														|  ] 자 입력됨(최대 100자 입력가능)
+								tr
+									th 주소 정보
+									td
+										form.form-inline
+											.form-row
+												.form-group
+													button.btn.btn-default(role="buttton") 주소검색
+													input.form-control(type="text" id="" style="width:80px")
+													input.form-control(type="text" id="" style="width:180px")
+													input.form-control(type="text" id="" style="width:80px")
+													input.form-control(type="text" id="" style="width:180px")
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 단독수정
+											.form-row
+												.form-group
+													button.btn.btn-default(role="buttton") 주소검색
+													input.form-control(type="text" id="" style="width:80px")
+													input.form-control(type="text" id="" style="width:180px")
+													input.form-control(type="text" id="" style="width:80px")
+													input.form-control(type="text" id="" style="width:180px")
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 단독수정
+											.form-row
+												.form-group
+													button.btn.btn-default(role="button") 위치확인
+													input.form-control(type="text" id="" style="width:100px")
+													input.form-control(type="text" id="" style="width:100px")
+													button.btn.btn-default(role="button") 좌표값 초기화
+													button.btn.btn-default(role="button") 주소삭제
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="" checked)
+														| 지도 사용
+												.form-group
+														span.select_text 지도레벨
+														select.form-control
+															option(selected) 12
+															option 1
+								tr
+									th 이용시간
+									td
+										form.form-inline
+											.form-row
+												.form-group
+													button.btn.btn-default(role="button") 필드추가
+													button.btn.btn-default(role="button") 정렬하기
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 이용시간 입력불가
+											.form-row
+												.form-group
+													select.form-control
+														option(selected) 요일선택
+														option 1
+													select.form-control
+														option(selected) 직접입력
+														option 1
+													select.form-control
+														option(selected) 09:00
+														option 1
+													span ~
+													select.form-control
+														option(selected) 18:00
+														option 1
+													span.input_summary
+														input.form-control(type="text" id="" style="width:175px")
+														small [
+															span.point_color_01 0
+															|  ] 자 입력됨 (최대 20자 입력가능)
+													button.btn.btn-default(role="button") 리셋
+													button.btn.btn-default(role="button") 필드삭제
+											.form-row
+												.form-group
+													select.form-control
+														option(selected) 요일선택
+														option 1
+													select.form-control
+														option(selected) 직접입력
+														option 1
+													select.form-control
+														option(selected) 09:00
+														option 1
+													span ~
+													select.form-control
+														option(selected) 18:00
+														option 1
+													span.input_summary
+														input.form-control(type="text" id="" style="width:175px")
+														small [
+															span.point_color_01 0
+															|  ] 자 입력됨 (최대 20자 입력가능)
+													button.btn.btn-default(role="button") 리셋
+													button.btn.btn-default(role="button") 필드삭제
+								tr
+									th 가격 정보
+									td
+										form.form-inline
+											.form-row
+												.form-group
+													button.btn.btn-default(role="button") 필드추가
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="" checked)
+														| 가격정보 입력불가
+												.form-group
+													small * 가격정보 50개까지 등록가능, 추천 2개까지 선택가능
+											.form-row
+												.form-group
+													input.form-control(type="text" id="" style="width:260px")
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 변동가격
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 추천
+												.form-group
+													button.btn.btn-default(role="button") 리셋
+													span.btn_set
+														button.btn.btn-default.btn-up(role="button" aria-label="위로")
+														button.btn.btn-default.btn-down(role="button" aria-label="아래로")
+													button.btn.btn-default(role="button") 필드삭제
+													button.btn.btn-default(role="button") 이미지추가
+											.form-row
+												.form-group.form_file
+													span.img-setting
+													input.form-control.form_point_color01(type="text" title="첨부된 파일명" readonly style="width:390px")
+													span.file_load
+														input(type="file" id="find_file01")
+														label.btn.btn-default(for="find_file01") 찾아보기
+												.form-group
+													button.btn.btn-default(role="button") 필드삭제
+											.form-row
+												.form-group.form_file
+													span.img-setting
+													input.form-control.form_point_color01(type="text" title="첨부된 파일명" readonly style="width:390px")
+													span.file_load
+														input(type="file" id="find_file02")
+														label.btn.btn-default(for="find_file02") 찾아보기
+												.form-group
+													button.btn.btn-default(role="button") 필드삭제
+								tr
+									th 관련 서류
+									td
+										form.form-inline
+											.form-group
+												label.checkbox-inline
+													input(type="checkbox" id="")
+													| 공식확인
+											.form-group
+												span.space_right_small 사업자 등록번호
+												input.form-control(type="text" id="" style="width:170px")
+												button.btn.btn-default(role="button") 중복체크
+												|  &nbsp;
+												small "-" 하이픈 등록시 제거됩니다.
+								tr
+									th 개인정보 약관동의
+									td
+										form.form-inline
+											.form-group
+												label.checkbox-inline
+													input(type="checkbox" id="")
+													| 개인정보 수집 및 이용동의
+											.form-group
+												label.checkbox-inline
+													input(type="checkbox" id="")
+													| 만14세 미만 보호자동의
+								tr
+									th DB Type
+									td
+										form.form-inline
+											.form-group
+												label.radio-inline
+													input(type="radio" id="" name="radio-02" checked="checked")
+													| 사이트+지역
+												label.radio-inline
+													input(type="radio" id="" name="radio-02" )
+													| 사이트
+												label.radio-inline
+													input(type="radio" id="" name="radio-02" )
+													| 지역
+
+							table.table.table-ibu-popup.popup-depth2
+								colgroup
+									col(style="width:150px")
+									col
+								thead
+									tr
+										th(colspan="2") 사이트 상세 정보
+											//[MARKUP] 토글시 .is_folded 추가
+											a(href="javascript:;" class="is_folded")
+												span 접기
+								tbody
+									tr
+										th 관련 URL
+										td
+											form.form-inline
+												.form-row
+													.form-group
+														button.btn.btn-default(role="button") 필드추가
+												.form-row
+													.form-group
+														input.form-control(type="text" id="" style="")
+														button.btn.btn-default(role="button") 열기
+														button.btn.btn-default(role="button") 중복체크
+														button.btn.btn-default(role="button") 필드삭제
+									tr
+										th 속성
+										td
+											form.form-inline
+												.form-row
+													.form-group
+														span.select_text 타입
+														select.form-control(style="width:90px")
+															option(selected) 네이버
+															option 1
+													.form-group
+														span.select_text 공식
+														select.form-control(style="width:90px")
+															option(selected) 상
+															option 1
+													.form-group
+														span.select_text 언어
+														select.form-control(style="width:90px")
+															option(selected) 한국어
+															option 1
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 증권
+													.form-group
+														input.form-control(type="text" id="" style="width:135px")
+														button.btn.btn-default(role="button") 링크확인
+												.form-row
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 데드링크
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 검색 어뷰즈
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 웹수집여부
+									tr
+										th 출처
+										td
+											form.form-inline
+												.form-group
+													span.select_text 출처 아이콘
+													select.form-control(style="width:160px")
+														option(selected) 네이버 오픈캐스트
+														option 1
+												.form-group
+													span.select_text 출처 부가정보
+													select.form-control(style="width:160px")
+														option(selected) 태그만 제외
+														option 1
+									tr
+										th 모바일
+										td
+											form.form-inline
+												.form-group
+													select.form-control(style="width:90px")
+														option(selected) 일반
+														option 1
+												.form-group
+													label.checkbox-inline
+														input(type="checkbox" id="")
+														| 리다이렉트여부
+									tr
+										th 기간 키워드
+										td
+											form.form-inline
+												.form-group
+													input.form-control(type="text" id="" style="width:500px")
+													small ; (세미콜론)으로 구분
+									tr
+										th 유효기간
+										td
+											form.form-inline
+												.form-group
+													span.space_right_small 유효기간
+													span.btn_set
+														input.form-control(type="text" id="" style="width:100px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+													span ~
+													span.btn_set
+														input.form-control(type="text" id="" style="width:100px")
+														button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+							table.table.table-ibu-popup.popup-depth2
+								colgroup
+									col(style="width:150px")
+									col
+								thead
+									tr
+										th(colspan="2") 지역 상세 정보
+											//[MARKUP] 토글시 .is_folded 추가
+											a(href="javascript:;" class="is_folded")
+												span 접기
+								tbody
+									tr
+										th 웹사이트/SNS
+										td
+											form.form-inline
+												.form-row
+													.form-group
+														button.btn.btn-default(role="button") 필드추가
+												.form-row
+													.form-group
+														select.form-control(style="width:105px;")
+															option(selected) 일반
+															option 1
+														input.form-control(type="text" style="width:300px" value="Http://")
+														span.btn_set
+															button.btn.btn-default.btn-up(role="button" aria-label="위로")
+															button.btn.btn-default.btn-down(role="button" aria-label="아래로")
+														button.btn.btn-default(role="button") 필드삭제
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 노출제외
+									tr
+										th 홍보문구
+										td
+											form.form-inline
+												.form-row.textarea_place
+													input.form-control(type="text" id="" style="width:100%")
+												.form-row
+													.form-group
+														label.radio-inline
+															input(type="radio" name="radio-03" id="")
+															| 항상 노출
+													.form-group
+														label.radio-inline
+															input(type="radio" name="radio-03" id="")
+															| 노출기간 설정
+														span.btn_set
+															input.form-control(type="text" id="" style="width:100px")
+															button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+														span ~
+														span.btn_set
+															input.form-control(type="text" id="" style="width:100px")
+															button.btn.btn-default.btn-calendar(role="button" aria-label="캘린더")
+									tr
+										th 부가정보
+										td
+											form.form-inline
+												.form-row
+													.form-group
+														ul.check-item
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 예약
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 단체석
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 주차
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 발렛파킹
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 포장
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 배달
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 방문접수/출장
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 무선 인터넷
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 애완동물 동반
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 유아시설(놀이방)
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 남/녀 화장실구분
+															li
+																label.checkbox-inline
+																	input(type="checkbox" id="")
+																	| 장애인 편의시설
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+												.form-row.textarea_place
+													textarea.form-control.form_point_color01(style="width:100%")
+									tr
+										th 정보제공처
+										td
+											form.form-inline
+												.textarea_place
+													input.form-control(type="text" style="width:100%")
+									tr
+										th 상세설명
+										td
+											form.form-inline
+												.form-row.textarea_place
+													textarea.form-control(style="width:100%")
+												.form-row
+													.form-group
+														small [
+															span.point_color_01 0
+															|  ] 자 입력됨
+													.form-group
+														button.btn.btn-default(role="button") 전체보기
+									tr
+										th 상세설명 출처 및 URL
+										td
+											form.form-inline
+												.form-group
+													input.form-control(type="text" id="" style="width:200px")
+													input.form-control(type="text" id="" style="width:420px")
+													button.btn.btn-default(role="button") 열기
+									tr
+										th 이미지
+										td
+											form.form-inline
+												.form-row
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="" checked)
+															| 대표이미지 고정
+													.form-group
+														small.point_color_02 # 특별한이슈가 없는 한 대표이미지 변경을 금지합니다.
+												.form-row
+													.form-group
+														button.btn.btn-default(role="button") 필드추가
+													.form-group
+														small * 등록된 이미지 개수 :
+															span.point_color_01 2
+															| &nbsp;/ 100
+												.form-row
+													.form-group.form_file
+														span.img-setting
+														input.form-control(type="text" style="width:165px")
+														input.form-control.form_point_color01(type="text" title="첨부된 파일" readonly style="width:165px")
+														span.file_load
+															input(type="file" id="find_file03")
+															label.btn.btn-default(for="find_file03") 찾아보기
+													.form-group
+														span.btn_set
+															button.btn.btn-default.btn-up(role="button" aria-label="위로")
+															button.btn.btn-default.btn-down(role="button")
+														span.btn_set
+															button.btn.btn-default.btn-up2(role="button" aria-label="더 위로")
+															button.btn.btn-default.btn-down2(role="button" aria-label="더 아래로")
+														button.btn.btn-default(role="button") 필드삭제
+												.form-row
+													.form-group
+														small.indent_description ※ 업로드파일 용량 안내 : JPG, PNG 파일은 10M이하, GIF 파일은 1M이하로 등록 가능
+															br
+															| (가급적 기준에 맞게 이미지 등록하시길 권유합니다.)
+									tr
+										th 미디어 추천
+										td
+											form.form-inline
+												.form-row.textarea_place
+													textarea.form-control(style="width:100%")
+												.form-row
+													.form-group
+														small 구분자 세미콜론(;). 책,TV를 통해 추천/소개되는 내용을 명시. 노출용이 아닌 검색용
+									tr
+										th 리뷰 및 검색결과 연동
+										td
+											form.form-inline
+												.form-row
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 리뷰 기능 사용
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 블로그 검색 연동
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 카페 검색 연동
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 이미지 검색 연동
+													.form-group
+														label.checkbox-inline
+															input(type="checkbox" id="")
+															| 뉴스 검색 연동
+												.form-row
+													.form-group
+														| 검색키워드 v설정
+													.form-group
+														label.radio-inline
+															input(type="radio" name="keyword" id="" checked)
+															| 업체명
+													.form-group
+														label.radio-inline
+															input(type="radio" name="keyword" id="")
+															| 지역명+업체명
+													.form-group
+														label.radio-inline
+															input(type="radio" name="keyword" id="")
+															| 직접입력
+														input.form-control(type="text" id="" style="width:250px")
+														button.btn.btn-default(role="button") 미리보기
+
+							h3.table-title 기타정보
+							table.table.table-ibu-popup
+								colgroup
+									col(style="width:150px")
+									col
+								tbody
+									tr
+										th 코멘트
+										td
+											form.form-inline
+												.form-row.textarea_place
+													input.form-control(type="text" id="" style="width:100%")
+												.form-row
+													.form-group
+														small ※ 업로드파일 용량 안내 : 2M이하 (기준에 맞게 등록하시기 바랍니다)
+														button.btn.btn-default(role="button") 첨부파일 첨가
+
+
+				footer.popup_footer
+					button.btn.btn-submit(type="submit") 저장
+					button.btn.btn-default(type="reset") 취소

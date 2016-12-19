@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>IBU</title>
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/ibu.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<!--[MARKUP] 토글시 .is_closed 추가-->
+			<aside class="aside">
+				<div class="aside_logo">
+					<div class="logo_naver" title="Naver"></div>
+					<div class="logo_ibu" title="IBU"></div>
+				</div>
+				<div class="aside_toggle">
+					<button class="toggle_button" role="button" aria-label="GNB 접기"></button>
+				</div>
+				<menu class="aside_menu">
+					<div class="menu_list">
+						<a class="menu_item as_item_01 is_selected" href="#">
+							<span class="text">검색</span>
+						</a>
+						<div class="menu_2depth">
+							<a href="#">
+								<span class="text">통합 데이터</span>
+							</a>
+							<div class="menu_3depth">
+								<a class="is_selected" href="#">
+									<span class="text">전체</span>
+								</a>
+								<a href="#">
+									<span class="text">사이트+지역</span>
+								</a>
+								<a href="#">
+									<span class="text">사이트</span>
+								</a>
+								<a href="#">
+									<span class="text">지역</span>
+								</a>
+							</div>
+							<a href="#">
+								<span class="text">카테고리</span>
+							</a>
+							<div class="menu_3depth">
+								<a href="#">
+									<span class="text">카테고리</span>
+								</a>
+							</div>
+						</div>
+						<a class="menu_item as_item_02" href="#">
+							<span class="text">카테고리</span>
+						</a>
+						<a class="menu_item as_item_03" href="#">
+							<span class="text">통합데이터</span>
+						</a>
+						<a class="menu_item as_item_04" href="#">
+							<span class="text">바로가기</span>
+						</a>
+						<a class="menu_item as_item_05" href="#">
+							<span class="text">요청</span>
+						</a>
+						<a class="menu_item as_item_06" href="#">
+							<span class="text">통계</span>
+						</a>
+						<a class="menu_item as_item_07" href="#">
+							<span class="text">기타</span>
+						</a>
+						<a class="menu_item as_item_08" href="#">
+							<span class="text">브랜드</span>
+						</a>
+					</div>
+				</menu>
+				<div class="aside_btns">
+					<a class="anchor" href="#" title="등록">
+						<span class="text">통합데이터 등록</span>
+					</a>
+					<a class="anchor" href="#" title="검색">
+						<span class="text">전체 사유 검색하기</span>
+					</a>
+				</div>
+			</aside>
+			<main class="main">
+				<div class="main_top">
+					<div class="top_left">
+						<span class="top_user">
+							<span class="user_photo">
+								<img class="photo">
+							</span>
+							<a class="user_name" href="#">
+								<span class="name">박재나</span>
+								<span class="id">(NT111111)</span>
+							</a>
+						</span>
+						<i class="separator"></i>
+						<a href="#">로그아웃</a>
+						<a class="top_more" href="#">서비스목록</a>
+					</div>
+					<div class="top_right">
+						<a href="#">IIMS</a>
+						<i class="separator"></i>
+						<a href="#">브라우저설정</a>
+						<i class="separator"></i>
+						<a href="#">자주묻는질문</a>
+						<i class="separator"></i>
+						<a href="#">개인권한</a>
+						<i class="separator"></i>
+						<a href="#">DRT 담당자안내</a>
+						<i class="separator"></i>
+						<a class="top_more" href="#">더보기</a>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-4">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="">통합데이타</label>
+									<select class="form-control">
+										<option disabled selected>지역상세 ID</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									<input class="form-control" type="text" id="" style="width:140px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-xs-4">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="">카테고리</label>
+									<input class="form-control" type="text" id="" style="width:140px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-xs-4">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="">지역(주소)</label>
+									<input class="form-control" type="text" id="" style="width:140px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row row_type1">
+						<div class="col-xs-12">
+							<h4>통합데이터 다운로드</h4>
+							<table class="table-ibu-default">
+								<colgroup>
+									<col style="width:51.5%">
+									<col style="width:14%">
+									<col style="width:11.5%">
+									<col style="width:11.5%">
+									<col style="width:11.5%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>대표 카테고리</th>
+										<th>유형</th>
+										<th>상태</th>
+										<th>광고</th>
+										<th>형식</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-left">
+											<div class="form-row">대표 카테고리 &nbsp;&nbsp;[&nbsp;&nbsp;
+												<label class="checkbox-inline">
+													<input type="checkbox" id="">ID</label>
+												<div class="form-group">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="">영문명</label>
+												</div>
+												<div class="form-group">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="">영문경로</label>
+												</div>
+												<div class="form-group">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="">한글명</label>
+												</div>
+												<div class="form-group">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="">한글경로</label>
+												</div>
+												<div class="form-group">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="">카테고리명</label>
+												</div>&nbsp;&nbsp;]</div>
+											<div class="form-row">
+												<label class="checkbox-inline">
+													<input type="checkbox" id="">지역카테고리</label>
+												<div class="form-group">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="">카테고리ID 리스트(세미콜론 구분)</label>
+												</div>
+											</div>
+											<div class="form-row">
+												<label class="checkbox-inline">
+													<input type="checkbox" id="">대표카테고리</label>
+												<div class="form-group">
+													<button class="btn btn-default" role="button">필드추가</button>
+													<button class="btn btn-default" role="button">필드삭제</button>
+													<small>(※ 하위카테고리도 조회시 카테고리ID 앞 체크박스 클릭)</small>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-inline">
+													<input class="check_alone" type="checkbox" id="">
+													<input class="form-control" type="text" id="" style="width:80px">
+													<input class="form-control" type="text" id="" style="width:255px">
+													<button class="btn btn-default" role="button">검색</button>
+													<button class="btn btn-default" role="button">열기</button>
+													<button class="btn btn-default" role="button">서비스</button>
+													<button class="btn btn-default" role="button">리셋</button>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-inline">
+													<input class="check_alone" type="checkbox" id="">
+													<input class="form-control" type="text" id="" style="width:80px">
+													<input class="form-control" type="text" id="" style="width:255px">
+													<button class="btn btn-default" role="button">검색</button>
+													<button class="btn btn-default" role="button">열기</button>
+													<button class="btn btn-default" role="button">서비스</button>
+													<button class="btn btn-default" role="button">리셋</button>
+												</div>
+											</div>
+										</td>
+										<td>
+											<select class="form-control" style="width:100%">
+												<option disabled selected>사이트+지역</option>
+												<option>1</option>
+											</select>
+										</td>
+										<td>
+											<select class="form-control" style="width:100%">
+												<option selected>일시정지</option>
+												<option>1</option>
+											</select>
+										</td>
+										<td>
+											<select class="form-control" style="width:100%">
+												<option selected>광고집행</option>
+												<option>1</option>
+											</select>
+										</td>
+										<td>
+											<select class="form-control" style="width:100%">
+												<option selected>이용자</option>
+												<option>1</option>
+											</select>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table-ibu-default table-ibu-type2">
+								<colgroup>
+									<col style="width:6%">
+									<col style="width:42%">
+									<col style="width:9%">
+									<col style="width:43%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th colspan="4" scope="col">URL, Phone, 설명, 제목, 업체명, alias, 업체alias, 업체대표키워드</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="table_padding1">
+										<td class="text-right">
+											<label class="checkbox-inline">
+												<input type="checkbox" id="">URL</label>
+										</td>
+										<td class="text-left">
+											<span class="form-inline">
+												<select class="form-control" style="width:120px">
+													<option selected>begin Width</option>
+													<option>1</option>
+												</select>
+												<input class="form-control" type="text" style="width:330px">
+											</span>
+										</td>
+										<td class="text-right">업체명</td>
+										<td class="text-left">
+											<span class="form-inline">
+												<select class="form-control" style="width:120px">
+													<option selected>=</option>
+													<option>1</option>
+												</select>
+												<input class="form-control" type="text" style="width:330px">
+											</span>
+										</td>
+									</tr>
+									<tr class="table_padding1">
+										<td class="text-right">Phone</td>
+										<td class="text-left">
+											<span class="form-inline">
+												<select class="form-control" style="width:120px">
+													<option selected>=</option>
+													<option>1</option>
+												</select>
+												<input class="form-control" type="text" style="width:330px">
+											</span>
+										</td>
+										<td class="text-right">업체alias</td>
+										<td class="text-left">
+											<span class="form-inline">
+												<select class="form-control" style="width:120px">
+													<option selected>begin Width</option>
+													<option>1</option>
+												</select>
+												<input class="form-control" type="text" style="width:330px">
+											</span>
+										</td>
+									</tr>
+									<tr class="table_padding1">
+										<td class="text-right">설명</td>
+										<td class="text-left">
+											<span class="form-inline">
+												<select class="form-control" style="width:120px">
+													<option selected>=</option>
+													<option>1</option>
+												</select>
+												<input class="form-control" type="text" style="width:330px">
+											</span>
+										</td>
+										<td class="text-right">업체대표키워드</td>
+										<td class="text-left">
+											<span class="form-inline">
+												<select class="form-control" style="width:120px">
+													<option selected>begin Width</option>
+													<option>1</option>
+												</select>
+												<input class="form-control" type="text" style="width:330px">
+											</span>
+										</td>
+									</tr>
+									<tr class="table_padding1">
+										<td class="text-right">제목</td>
+										<td class="text-left">
+											<span class="form-inline">
+												<select class="form-control" style="width:120px">
+													<option selected>=</option>
+													<option>1</option>
+												</select>
+												<input class="form-control" type="text" style="width:330px">
+											</span>
+										</td>
+										<td class="text-right">워드</td>
+										<td class="text-left">
+											<span class="form-inline">
+												<select class="form-control" style="width:120px">
+													<option selected>begin Width</option>
+													<option>1</option>
+												</select>
+												<input class="form-control" type="text" style="width:330px">
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table-ibu-default table-ibu-type2">
+								<colgroup>
+									<col style="width:100%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>등록일, 수정일, GDID, 업로드</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-left">
+											<div class="form-inline">등록일&nbsp;
+												<span class="btn_set">
+													<input class="form-control" type="text" id="" style="width:90px">
+													<button class="btn btn-default btn-calendar" role="button" aria-label="캘린더"></button>
+												</span>
+												<span>~</span>
+												<span class="btn_set">
+													<input class="form-control" type="text" id="" style="width:90px">
+													<button class="btn btn-default btn-calendar" role="button" aria-label="캘린더"></button>
+												</span>
+												<div class="form-group">수정일&nbsp;
+													<span class="btn_set">
+														<input class="form-control" type="text" id="" style="width:90px">
+														<button class="btn btn-default btn-calendar" role="button" aria-label="캘린더"></button>
+													</span>
+													<span>~</span>
+													<span class="btn_set">
+														<input class="form-control" type="text" id="" style="width:90px">
+														<button class="btn btn-default btn-calendar" role="button" aria-label="캘린더"></button>
+													</span>
+												</div>
+												<div class="form-group">
+													<label class="radio-inline">
+														<input type="radio" id="" name="radio-01">통합ID</label>
+													<label class="radio-inline">
+														<input type="radio" id="" name="radio-01">지역상세ID</label>
+													<input class="form-control" type="text" id="" style="215px">
+													<button class="btn btn-default" role="button">파일선택</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table-ibu-default table-ibu-type2">
+								<colgroup>
+									<col style="width:100%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>주소</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-left">
+											<div class="form-inline">
+												<div class="form-row">지번주소1&nbsp;
+													<span class="form-inline">
+														<select class="form-control" style="width:120px">
+															<option selected>begin</option>
+															<option>1</option>
+														</select>
+														<input class="form-control" type="text" id="" style="width:330px">
+														<div class="form-group">
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">주소2</label>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">주소3</label>
+														</div>
+														<div class="form-group">동코드&nbsp;
+															<select class="form-control" style="width:120px">
+																<option selected>begin</option>
+																<option>1</option>
+															</select>
+														</div>
+														<div class="form-group">지도유무&nbsp;
+															<select class="form-control" style="width:120px">
+																<option selected>begin</option>
+																<option>1</option>
+															</select>
+														</div>
+													</span>
+												</div>
+												<div class="form-row">도로주소1&nbsp;
+													<span class="form-inline">
+														<select class="form-control" style="width:120px">
+															<option selected>like</option>
+															<option>1</option>
+														</select>
+														<input class="form-control" type="text" id="" style="width:330px">
+														<div class="form-group">
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">주소2</label>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">주소3</label>
+														</div>
+														<div class="form-group">&nbsp;&nbsp;&nbsp;레벨&nbsp;
+															<select class="form-control" style="width:120px">
+																<option selected>begin</option>
+																<option>1</option>
+															</select>
+														</div>
+														<div class="form-group">X&nbsp;
+															<select class="form-control" style="width:120px">
+																<option selected>begin</option>
+																<option>1</option>
+															</select>
+														</div>
+														<div class="form-group">Y&nbsp;
+															<select class="form-control" style="width:120px">
+																<option selected>begin</option>
+																<option>1</option>
+															</select>
+														</div>
+													</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table-ibu-default table-ibu-type2">
+								<colgroup>
+									<col style="width:100%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>바로가기</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-left">
+											<div class="form-inline">
+												<div class="form-row">키워드&nbsp;
+													<select class="form-control" style="width:120px">
+														<option selected>begin Width</option>
+														<option>1</option>
+													</select>
+													<input class="form-control" type="text" id="" style="width:340px">
+													<div class="form-group">&nbsp;&nbsp;상태&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">대상&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">이동&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-row">
+													<select class="form-control" style="width:120px">
+														<option selected>등록일</option>
+														<option>1</option>
+													</select>
+													<span class="btn_set">
+														<input class="form-control" type="text" id="" style="width:90px">
+														<button class="btn btn-default btn-calendar" role="button" aria-label="캘린더"></button>
+													</span>
+													<span>~</span>
+													<span class="btn_set">
+														<input class="form-control" type="text" id="" style="width:90px">
+														<button class="btn btn-default btn-calendar" role="button" aria-label="캘린더"></button>
+													</span>
+													<div class="form-group">
+														<label class="checkbox-inline">
+															<input type="checkbox" id="">바로가기 GDID</label>
+													</div>
+													<div class="form-group">서브링크&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">전화번호&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table-ibu-default table-ibu-type2">
+								<colgroup>
+									<col style="width:100%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>기타 추가정보</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-left">
+											<div class="form-inline">
+												<div class="form-row">노출URL&nbsp;
+													<select class="form-control" style="width:120px">
+														<option selected>전체</option>
+														<option>1</option>
+													</select>
+													<div class="form-group">노출Phone&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">전화번호 임의생성&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">신청자&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table-ibu-default table-ibu-type2">
+								<colgroup>
+									<col style="width:100%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>기타 추가정보</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-left">
+											<div class="form-inline">
+												<div class="form-row">
+													<label class="checkbox-inline">
+														<input type="checkbox">데드</label>
+													<label class="checkbox-inline">
+														<input type="checkbox">클릭</label>
+													<label class="checkbox-inline">
+														<input type="checkbox">집중키워드</label>
+													<label class="checkbox-inline">
+														<input type="checkbox">유형</label>
+													<div class="form-group">이용자 편집&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">공식&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">체크아웃&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">데드링크&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-row">이전제목&nbsp;
+													<select class="form-control" style="width:120px">
+														<option selected>전체</option>
+														<option>1</option>
+													</select>
+													<input class="form-control" type="text" id="" style="width:280px">
+													<div class="form-group">모바일&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">모바일매핑&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">다이렉트여부&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table-ibu-default table-ibu-type2">
+								<colgroup>
+									<col style="width:100%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>지역 상세정보</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-left">
+											<form class="form-inline">
+												<div class="form-row">
+													<ul class="list_checkitem">
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">정보제공처</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">정보제공처URL</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">상세설명</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">상세설명출처</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">찾아오는길</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">1인당 평균가격</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">가격정보</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">객실정보</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">이미지개수</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">메뉴판 이미지개수</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">테마 입력여부</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">이용시간</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">이용시간 내용</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">펜션제공서비스 입력</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">체크인/체크아웃 입력</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">스타일리스트 개수</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">기술사진정보 개수</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">시술사진 이미지 개수</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">시술어울리는 정보개수</label>
+														</li>
+														<li>
+															<label class="checkbox-inline">
+																<input type="checkbox" id="">비즈캐쳐</label>
+														</li>
+													</ul>
+												</div>
+												<div class="form-row">DB 연동&nbsp;
+													<select class="form-control" style="width:140px">
+														<option selected>건강서비스 상담소</option>
+														<option>1</option>
+													</select>
+													<div class="form-group">쿠폰업체&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">쿠폰노출&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">실내지도뷰&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+													<div class="form-group">평가글&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-row">URL 유무&nbsp;
+													<select class="form-control" style="width:140px">
+														<option selected>전체</option>
+														<option>1</option>
+													</select>
+													<div class="form-group">톡톡&nbsp;
+														<select class="form-control" style="width:120px">
+															<option selected>전체</option>
+															<option>1</option>
+														</select>
+													</div>
+												</div>
+											</form>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="text_description point_color_04"> ※ 필요한 데이터 필드값들을 찾아 제목 앞의 체크버튼을 클릭하여 주세요.(단, 카테고리는 제목 아래 존재) ※ '통합ID' 형식의 텍스트파일 업로드</p>
+							<div class="text-center btn_space_01">
+								<button class="btn btn-default" type="submit" role="button">조회</button>
+							</div>
+							<p class="result_number">검색결과 :
+								<span>총
+									<strong class="point_color_03">785</strong> 건</span>
+							</p>
+							<div class="text-right">
+								<button class="btn btn-default" role="button">엑셀다운</button>
+							</div>
+							<table class="table-ibu-default table-ibu-type1">
+								<colgroup>
+									<col style="width:15%">
+									<col style="width:*">
+									<col style="width:15%">
+									<col style="width:10%">
+									<col style="width:15%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>카테고리ID</th>
+										<th>카테고리영문경로</th>
+										<th>통합ID</th>
+										<th>유형</th>
+										<th>지역상세ID</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>534</td>
+										<td>IIBusiness</td>
+										<td>1234567</td>
+										<td>Site</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>534</td>
+										<td>IIBusiness</td>
+										<td>1234567</td>
+										<td>Site</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="paginate text-center">
+								<div class="result_number">검색결과 :
+									<span>총
+										<strong class="point_color_03">785</strong> 건</span>
+								</div>
+								<ul class="pagination">
+									<li class="page-item">
+										<a class="page-link" href="#">
+											<i class="fa fa-angle-left" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 이전 페이지로 이동</span>
+										</a>
+									</li>
+									<!-- [MARKUP] 선택된 페이지 비활성화 .disabled 처리-->
+									<li class="page-item disabled">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">4</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">5</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">6</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">7</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">8</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">9</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#" title="다음">
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 다음 페이지로 이동</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="main_footer">
+					<address>Copyright © NAVER Corp. All Rights Reserved.</address>
+				</footer>
+			</main>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>IBU</title>
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/ibu.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<!--[MARKUP] 토글시 .is_closed 추가-->
+			<aside class="aside">
+				<div class="aside_logo">
+					<div class="logo_naver" title="Naver"></div>
+					<div class="logo_ibu" title="IBU"></div>
+				</div>
+				<div class="aside_toggle">
+					<button class="toggle_button" role="button" aria-label="GNB 접기"></button>
+				</div>
+				<menu class="aside_menu">
+					<div class="menu_list">
+						<a class="menu_item as_item_01 is_selected" href="#">
+							<span class="text">검색</span>
+						</a>
+						<div class="menu_2depth">
+							<a href="#">
+								<span class="text">통합 데이터다</span>
+							</a>
+							<div class="menu_3depth">
+								<a class="is_selected" href="#">
+									<span class="text">전체</span>
+								</a>
+								<a href="#">
+									<span class="text">사이트+지역</span>
+								</a>
+								<a href="#">
+									<span class="text">사이트</span>
+								</a>
+								<a href="#">
+									<span class="text">지역</span>
+								</a>
+							</div>
+							<a href="#">
+								<span class="text">카테고리</span>
+							</a>
+							<div class="menu_3depth">
+								<a href="#">
+									<span class="text">카테고리</span>
+								</a>
+							</div>
+						</div>
+						<a class="menu_item as_item_02" href="#">
+							<span class="text">카테고리</span>
+						</a>
+						<a class="menu_item as_item_03" href="#">
+							<span class="text">통합데이터</span>
+						</a>
+						<a class="menu_item as_item_04" href="#">
+							<span class="text">바로가기</span>
+						</a>
+						<a class="menu_item as_item_05" href="#">
+							<span class="text">요청</span>
+						</a>
+						<a class="menu_item as_item_06" href="#">
+							<span class="text">통계</span>
+						</a>
+						<a class="menu_item as_item_07" href="#">
+							<span class="text">기타</span>
+						</a>
+						<a class="menu_item as_item_08" href="#">
+							<span class="text">브랜드</span>
+						</a>
+					</div>
+				</menu>
+				<div class="aside_btns">
+					<a class="anchor" href="#" title="등록">
+						<span class="text">통합데이터 등록</span>
+					</a>
+					<a class="anchor" href="#" title="검색">
+						<span class="text">전체 사유 검색하기</span>
+					</a>
+				</div>
+			</aside>
+			<main class="main">
+				<div class="main_top">
+					<div class="top_left">
+						<span class="top_user">
+							<span class="user_photo">
+								<img class="photo">
+							</span>
+							<a class="user_name" href="#">
+								<span class="name">박재나</span>
+								<span class="id">(NT111111)</span>
+							</a>
+						</span>
+						<i class="separator"></i>
+						<a href="#">로그아웃</a>
+						<a class="top_more" href="#">서비스목록</a>
+					</div>
+					<div class="top_right">
+						<a href="#">IIMS</a>
+						<i class="separator"></i>
+						<a href="#">브라우저설정</a>
+						<i class="separator"></i>
+						<a href="#">자주묻는질문</a>
+						<i class="separator"></i>
+						<a href="#">개인권한</a>
+						<i class="separator"></i>
+						<a href="#">DRT 담당자안내</a>
+						<i class="separator"></i>
+						<a class="top_more" href="#">더보기 </a>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-12">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="search_map">지도검색</label>
+									<select class="form-control" id="search_map" style="width:150px">
+										<option disabled selected>업체/업종검색</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									<input class="form-control" type="text" id="" style="width:540px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row row_type1">
+						<div class="col-xs-12">
+							<h4>DB간 중복 조회 > DRT VS DRT</h4>
+							<div class="search_query">
+								<form class="form-inline">
+									<div class="form-group">
+										<b>중복 유형 타임 &nbsp;</b>
+										<select class="form-control" style="width:135px">
+											<option selected>중복 유형 전체</option>
+											<option>1</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<b>검색조건 &nbsp;</b>
+										<select class="form-control" style="width:135px">
+											<option selected>업체명</option>
+											<option>1</option>
+										</select>
+										<select class="form-control" style="width:135px">
+											<option selected>begin width</option>
+											<option>1</option>
+										</select>
+										<input class="form-control" type="text" id="" style="width:190px">
+										<select class="form-control" style="width:150px">
+											<option selected>중복목록 등록일역순</option>
+											<option>1</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label>
+											<b>목록개수 &nbsp;</b>
+											<input class="form-control" type="text" id="" style="width:60px">
+											<span>개</span>
+										</label>
+									</div>
+								</form>
+							</div>
+							<div class="btn_space_01 text-center">
+								<button class="btn btn-default" role="button" type="submit">검색</button>
+							</div>
+							<p class="result_number">기준일 :
+								<span class="result_date">2016.09.07</span>
+								<span>(총
+									<strong class="point_color_03">4,805</strong>)</span>
+							</p>
+							<div class="text-right">
+								<button class="btn btn-default" role="button">전체선택</button>
+								<button class="btn btn-default" role="button">일괄삭제</button>
+							</div>
+							<div class="drt_wrap">
+								<div class="drt_group">
+									<div class="drt_item">
+										<a href="#">[13080320]</a>
+										<a class="drt_link1" href="#">사임당어린이집</a>
+										<span class="point_color_05">[D]</span>
+										<span class="point_color_06">[이용자]</span>
+										<small>등록,수정: 2009-03-26 12:12:33 (최수영)</small>
+										<small>2016-10-10 20:56:48 (박일순)</small>
+										<a class="drt_link2" href="#">DRT DB 상세보기</a>
+										<a class="drt_link2" href="#"> 홈페이지 열기</a>
+										<p>
+											<span>Alias: 사임당어린이집</span>
+											<span>대표전화(노출전화): 031-771-6233 ()</span>
+											<span>동코드: 0283031021 주소: 경기도 양평군 강상면 병산리 604</span>
+											<span>중심좌표: 127.46309 | 37.489676</span>
+											<span>교육,학문>영,유아,아동>어린이집>어린이집-일반</span>
+										</p>
+									</div>
+									<div class="drt_item">
+										<a href="#">[13080320]</a>
+										<a class="drt_link1" href="#">세종어린이집</a>
+										<span class="point_color_05">[DKP]</span>
+										<span class="point_color_06">[에디터]</span>
+										<small>등록,수정: 2009-03-26 12:12:33 (송금선)</small>
+										<small>2016-10-10 20:56:48 (성무근)</small>
+										<a class="drt_link2" href="#">DRT DB 상세보기</a>
+										<a class="drt_link2" href="#"> 홈페이지 열기</a>
+										<p>
+											<span>Alias: 사임당어린이집</span>
+											<span>대표전화(노출전화): 031-771-6233 ()</span>
+											<span>동코드: 0283031021 주소: 경기도 양평군 강상면 병산리 604</span>
+											<span>중심좌표: 127.46309 | 37.489676</span>
+											<span>교육,학문>영,유아,아동>어린이집>어린이집-일반</span>
+										</p>
+									</div>
+									<div class="drt_checkbox">
+										<input type="checkbox">
+										<span>[620291]</span>중복 유형 :
+										<b class="code">E2</b>
+										<span>(2016-10-10 21:39:46)</span>
+										<button class="btn btn-default" role="button">목록에서 삭제</button>
+									</div>
+								</div>
+								<div class="drt_group">
+									<div class="drt_item">
+										<a href="#">[13080320]</a>
+										<a class="drt_link1" href="#">사임당어린이집</a>
+										<span class="point_color_05">[D]</span>
+										<span class="point_color_06">[이용자]</span>
+										<small>등록,수정: 2009-03-26 12:12:33 (최수영)</small>
+										<small>2016-10-10 20:56:48 (박일순)</small>
+										<a class="drt_link2" href="#">DRT DB 상세보기</a>
+										<a class="drt_link2" href="#"> 홈페이지 열기</a>
+										<p>
+											<span>Alias: 사임당어린이집</span>
+											<span>대표전화(노출전화): 031-771-6233 ()</span>
+											<span>동코드: 0283031021 주소: 경기도 양평군 강상면 병산리 604</span>
+											<span>중심좌표: 127.46309 | 37.489676</span>
+											<span>교육,학문>영,유아,아동>어린이집>어린이집-일반</span>
+										</p>
+									</div>
+									<div class="drt_item">
+										<a href="#">[13080320]</a>
+										<a class="drt_link1" href="#">세종어린이집</a>
+										<span class="point_color_05">[DKP]</span>
+										<span class="point_color_06">[에디터]</span>
+										<small>등록,수정: 2009-03-26 12:12:33 (송금선)</small>
+										<small>2016-10-10 20:56:48 (성무근)</small>
+										<a class="drt_link2" href="#">DRT DB 상세보기</a>
+										<a class="drt_link2" href="#"> 홈페이지 열기</a>
+										<p>
+											<span>Alias: 사임당어린이집</span>
+											<span>대표전화(노출전화): 031-771-6233 ()</span>
+											<span>동코드: 0283031021 주소: 경기도 양평군 강상면 병산리 604</span>
+											<span>중심좌표: 127.46309 | 37.489676</span>
+											<span>교육,학문>영,유아,아동>어린이집>어린이집-일반</span>
+										</p>
+									</div>
+									<div class="drt_checkbox">
+										<input type="checkbox">
+										<span>[620291]</span>중복 유형 :
+										<b class="code">LN</b>
+										<span>(2016-10-10 21:39:46)</span>
+										<button class="btn btn-default" role="button">목록에서 삭제</button>
+									</div>
+								</div>
+							</div>
+							<p class="result_number">기준일 :
+								<span class="result_date">2016.09.07</span>
+								<span>(총
+									<strong class="point_color_03">4,805</strong>)</span>
+							</p>
+							<div class="text-right">
+								<button class="btn btn-default" role="button">전체선택</button>
+								<button class="btn btn-default" role="button">일괄삭제</button>
+							</div>
+							<div class="paginate text-center">
+								<ul class="pagination">
+									<li class="page-item">
+										<a class="page-link" href="#">
+											<i class="fa fa-angle-left" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 이전 페이지로 이동</span>
+										</a>
+									</li>
+									<!-- [MARKUP] 선택된 페이지 비활성화 .disabled 처리-->
+									<li class="page-item disabled">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">4</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">5</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">6</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">7</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">8</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">9</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#" title="다음">
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 다음 페이지로 이동</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="main_footer">
+					<address>Copyright © NAVER Corp. All Rights Reserved.</address>
+				</footer>
+			</main>
+		</div>
+	</body>
+</html>

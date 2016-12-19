@@ -1,0 +1,216 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap
+			//[MARKUP] 토글시 .is_closed 추가
+			aside.aside
+				.aside_logo
+					.logo_naver(title="Naver")
+					.logo_ibu(title="IBU")
+				.aside_toggle
+					button.toggle_button(role="button" aria-label="GNB 접기")
+				menu.aside_menu
+					.menu_list
+						a.menu_item.as_item_01.is_selected(href="#"): span.text 검색
+						.menu_2depth
+							a(href="#"): span.text 통합 데이터다
+							.menu_3depth
+								a(href="#").is_selected: span.text 전체
+								a(href="#"): span.text 사이트+지역
+								a(href="#"): span.text 사이트
+								a(href="#"): span.text 지역
+							a(href="#"): span.text 카테고리
+							.menu_3depth
+								a(href="#"): span.text 카테고리
+											span.point_color_04 [privacy]
+						a.menu_item.as_item_02(href="#"): span.text 카테고리
+						a.menu_item.as_item_03(href="#"): span.text 통합데이터
+						a.menu_item.as_item_04(href="#"): span.text 바로가기
+						a.menu_item.as_item_05(href="#"): span.text 요청
+						a.menu_item.as_item_06(href="#"): span.text 통계
+						a.menu_item.as_item_07(href="#"): span.text 기타
+						a.menu_item.as_item_08(href="#"): span.text 브랜드
+				.aside_btns
+					a.anchor(href="#" title="등록"): span.text 통합데이터 등록
+					a.anchor(href="#" title="검색"): span.text 전체 사유 검색하기
+			main.main
+				.main_top
+					.top_left
+						span.top_user
+							span.user_photo
+								img.photo
+							a.user_name(href="#")
+								span.name 박재나
+								span.id (NT111111)
+						i.separator
+						a(href="#") 로그아웃
+						a.top_more(href="#") 서비스목록
+					.top_right
+						a(href="#") IIMS
+						i.separator
+						a(href="#") 브라우저설정
+						i.separator
+						a(href="#") 자주묻는질문
+						i.separator
+						a(href="#") 개인권한
+						i.separator
+						a(href="#") DRT 담당자안내
+						i.separator
+						a.top_more(href="#") 더보기 
+				.container-fluid
+					.row
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 통합데이타
+
+									select.form-control
+										option(disabled selected) 지역상세 ID
+										option 1
+										option 2
+										option 3
+										option 4
+										option 5
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 카테고리
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 지역(주소)
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+					.row.row_type1
+						.col-xs-12
+							h4 통합 데이터 검색
+							.search_query
+								form.form-inline
+									.form-group
+										select.form-control
+											option(selected) 미삭제
+											option 1
+										select.form-control
+											option(selected) 전체상태
+											option 1
+										select.form-control
+											option(selected) 네이버 아이디
+											option 1
+										select.form-control
+											option(selected) begin with
+											option 1
+										input.form-control(type="text" id="" style="width:178px")
+										label
+											span 목록개수
+											input.form-control(type="text" id="" style="width:50px")
+											span 개
+										select.form-control
+											option(selected) 전화번호순
+											option 1
+										button.btn.btn-default(type="submit") 검색
+										label
+											input.checkbox(type="checkbox")
+											span 상세조건
+							.clearfix
+								p.result_number
+									| 검색결과 :
+									span.
+										총 #[strong.point_color_03 785] 건
+							.search_result
+								.result_list
+									.result_item
+										input.checkbox(type="checkbox")
+										span.group
+											strong.text [278286] <a href="#">펜션 엔 인포</a>
+										span.group
+											span.text.accent-1 <a href="#">[바로가기]</a>
+											span.text.accent-2 [사이트]
+											span.text.accent-3 [이용자편집]
+										span.group.small
+											span.text 클릭: <b>0.439558</b>
+										span.group.small
+											span.text 등록: 2005-05-23 (박혜림) 2014-12-09 (고민진)
+										p 가평, 거제도, 양평, 을왕리, 평창, 홍천, 포천, 펜션 예약 사이트, 스파, 커플, 홈페이지제작 등 안내.
+										span.url <a href="#">http://www.pensionninfo.com/</a>
+										br
+										span.group
+											span.text <a href="#">세계정보, 여행 > 숙박 > 민박, 펜션 > 예약서비스</a>
+											span.text.accent-4 [사이트]
+										span.group.small
+											span.text 전화번호 : 010-5532-4658
+										span.group.small
+											span.text 지역상세ID :
+												a(href="#") 12302719
+									.result_item
+										input.checkbox(type="checkbox")
+										span.group
+											strong.text [278286] <a href="#">펜션 엔 인포</a>
+										span.group
+											b.text.accent-1 <a href="#">[바로가기]</a>
+											b.text.accent-5 <a href="#">[서브링크]</a>
+											span.text.accent-2 [사이트]
+											span.text.accent-3 [이용자편집]
+											span.text.accent-6 [지도]
+										span.group.small
+											span.text 클릭: <b>0.439558</b>
+										span.group.small
+											span.text 등록: 2005-05-23 (박혜림) 2014-12-09 (고민진)
+										p 가평, 거제도, 양평, 을왕리, 평창, 홍천, 포천, 펜션 예약 사이트, 스파, 커플, 홈페이지제작 등 안내.
+										span.url <a href="#">http://www.pensionninfo.com/</a>
+										br
+										span.group
+											span.text <a href="#">세계정보, 여행 > 숙박 > 민박, 펜션 > 예약서비스</a>
+											span.text.accent-4 [사이트]
+										span.group.small
+											span.text 전화번호 : 010-5532-4658
+										span.group.small
+											span.text 지역상세ID :
+												a(href="#") 12302719
+
+							.paginate.text-center
+								.result_number
+									| 검색결과 :
+									span.
+										총 #[strong.point_color_03 785] 건
+								ul.pagination
+									li.page-item
+										a.page-link(href="#")
+											i.fa.fa-angle-left(aria-hidden="true")
+											span.sr-only 목록에서 이전 페이지로 이동
+									// [MARKUP] 선택된 페이지 비활성화 .disabled 처리
+									li.page-item.disabled
+										a.page-link(href="#") 1
+									li.page-item
+										a.page-link(href="#") 2
+									li.page-item
+										a.page-link(href="#") 3
+									li.page-item
+										a.page-link(href="#") 4
+									li.page-item
+										a.page-link(href="#") 5
+									li.page-item
+										a.page-link(href="#") 6
+									li.page-item
+										a.page-link(href="#") 7
+									li.page-item
+										a.page-link(href="#") 8
+									li.page-item
+										a.page-link(href="#") 9
+									li.page-item
+										a.page-link(href="#" title="다음")
+											i.fa.fa-angle-right(aria-hidden="true")
+											span.sr-only 목록에서 다음 페이지로 이동
+
+				footer.main_footer
+					address Copyright © NAVER Corp. All Rights Reserved.
+

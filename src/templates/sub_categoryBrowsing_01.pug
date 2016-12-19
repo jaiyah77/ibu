@@ -1,0 +1,427 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap
+			//[MARKUP] 토글시 .is_closed 추가
+			aside.aside
+				.aside_logo
+					.logo_naver(title="Naver")
+					.logo_ibu(title="IBU")
+				.aside_toggle
+					button.toggle_button(role="button" aria-label="GNB 접기")
+				menu.aside_menu
+					.menu_list
+						a.menu_item.as_item_01.is_selected(href="#"): span.text 검색
+						.menu_2depth
+							a(href="#"): span.text 통합 데이터
+							.menu_3depth
+								a(href="#").is_selected: span.text 전체
+								a(href="#"): span.text 사이트+지역
+								a(href="#"): span.text 사이트
+								a(href="#"): span.text 지역
+							a(href="#"): span.text 카테고리
+							.menu_3depth
+								a(href="#"): span.text 카테고리
+						a.menu_item.as_item_02(href="#"): span.text 카테고리
+						a.menu_item.as_item_03(href="#"): span.text 통합데이터
+						a.menu_item.as_item_04(href="#"): span.text 바로가기
+						a.menu_item.as_item_05(href="#"): span.text 요청
+						a.menu_item.as_item_06(href="#"): span.text 통계
+						a.menu_item.as_item_07(href="#"): span.text 기타
+						a.menu_item.as_item_08(href="#"): span.text 브랜드
+				.aside_btns
+					a.anchor(href="#" title="등록"): span.text 통합데이터 등록
+					a.anchor(href="#" title="검색"): span.text 전체 사유 검색하기
+			main.main
+				.main_top
+					.top_left
+						span.top_user
+							span.user_photo
+								img.photo
+							a.user_name(href="#")
+								span.name 박재나
+								span.id (NT111111)
+						i.separator
+						a(href="#") 로그아웃
+						a.top_more(href="#") 서비스목록
+					.top_right
+						a(href="#") IIMS
+						i.separator
+						a(href="#") 브라우저설정
+						i.separator
+						a(href="#") 자주묻는질문
+						i.separator
+						a(href="#") 개인권한
+						i.separator
+						a(href="#") DRT 담당자안내
+						i.separator
+						a.top_more(href="#") 더보기 
+				.container-fluid
+					.row
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 통합데이타
+
+									select.form-control
+										option(disabled selected) 지역상세 ID
+										option 1
+										option 2
+										option 3
+										option 4
+										option 5
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 카테고리
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+						.col-xs-4
+							form.form-inline.text-center
+								.form-group
+									label(for="") 지역(주소)
+									input.form-control(type="text" id="" style="width:140px")
+									button.btn.btn-default(type="submit") 검색
+
+					.row.row_type2
+						h4 카테고리 브라우징
+						.col-xs-12.category_wrap
+							.category_row
+								.col-xs-2.category_group
+									h5
+										a(href="#") 문화, 예술
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 건축
+										li: a(href="#") 공연예술
+										li: a(href="#") 기관,단체
+										li: a(href="#") 디자인
+								.col-xs-2.category_group
+									h5
+										a(href="#") 인물, 사람들
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") DJ
+										li: a(href="#") 가수
+										li: a(href="#") 개인 홈페이지
+										li: a(href="#") 건축가
+								.col-xs-2.category_group
+									h5
+										a(href="#") 뉴스, 미디어
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") TV방송
+										li: a(href="#") 교육, 학원
+										li: a(href="#") 뉴스 속보
+										li: a(href="#") 데이터방송
+								.col-xs-2.category_group
+									h5
+										a(href="#") 게임
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") RPG
+										li: a(href="#") 게임 소프트웨어
+										li: a(href="#") 게임 포털
+										li: a(href="#") 게임기
+								.col-xs-2.category_group
+									h5
+										a(href="#") 레저, 스포츠
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 겨울스포츠
+										li: a(href="#") 경기장
+										li: a(href="#") 구기스포츠
+										li: a(href="#") 기타스포츠
+								.col-xs-2.category_group
+									h5
+										a(href="#") 경제, 재테크
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 경제, 경영연구소
+										li: a(href="#") 경제, 경영학
+										li: a(href="#") 경제용어
+										li: a(href="#") 경제정책
+							.category_row
+								.col-xs-2.category_group
+									h5
+										a(href="#") 기업, 쇼핑몰
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 가구, 인테리어용품
+										li: a(href="#") 가정, 주방용품
+										li: a(href="#") 건강, 의료
+										li: a(href="#") 건설, 토목
+								.col-xs-2.category_group
+									h5
+										a(href="#") 사회,정치
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 국가별 정부기관
+										li: a(href="#") 국제
+										li: a(href="#") 군대, 국방
+										li: a(href="#") 기관, 단체
+								.col-xs-2.category_group
+									h5
+										a(href="#") 엔터테인먼트
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 기관, 단체
+										li: a(href="#") 마술
+										li: a(href="#") 만화, 애니메이션
+										li: a(href="#") 멀티방
+								.col-xs-2.category_group
+									h5
+										a(href="#") 교육, 학문
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 경시대회
+										li: a(href="#") 고등학교 교육
+										li: a(href="#") 공학
+										li: a(href="#") 교수, 학습자료
+								.col-xs-2.category_group
+									h5
+										a(href="#") 세계정보, 여행
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 국가정보
+										li: a(href="#") 국내여행
+										li: a(href="#") 극지방
+										li: a(href="#") 대한민국
+								.col-xs-2.category_group
+									h5
+										a(href="#") 컴퓨터, 인터넷
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 검색, 포탈
+										li: a(href="#") 계정서비스
+										li: a(href="#") 기관, 단체
+										li: a(href="#") 뉴스그룹
+							.category_row
+								.col-xs-2.category_group
+									h5
+										a(href="#") 생활, 건강
+										span.point_color_03 [사이트]
+									ul.list_category
+										li: a(href="#") 가정생활
+										li: a(href="#") 건강
+										li: a(href="#") 계절
+										li: a(href="#") 교통정보
+								.col-xs-2.category_group
+									h5
+										a(href="#") 투표소
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 가경동제10투표소
+										li: a(href="#") 가경동제1투표소
+										li: a(href="#") 가경동제2투표소
+										li: a(href="#") 가경동제3투표소
+								.col-xs-2.category_group
+									h5
+										a(href="#") 음식점
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 도시락,컵밥
+										li: a(href="#") 베트남음식
+										li: a(href="#") 분식
+										li: a(href="#") 뷔페
+								.col-xs-2.category_group
+									h5
+										a(href="#") 문화, 예술
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 문화,예술단체
+										li: a(href="#") 문화,예술인
+										li: a(href="#") 문화시설
+										li: a(href="#") 종교
+								.col-xs-2.category_group
+									h5
+										a(href="#") 숙박
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 게스트하우스
+										li: a(href="#") 고시원,고시텔
+										li: a(href="#") 관광농원,팜스테이
+										li: a(href="#") 기타숙박업
+								.col-xs-2.category_group
+									h5
+										a(href="#") 스포츠, 오락
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 레포츠시설
+										li: a(href="#") 스포츠구단,클럽
+										li: a(href="#") 스포츠시설
+										li: a(href="#") 오락시설
+							.category_row
+								.col-xs-2.category_group
+									h5
+										a(href="#") 여행, 명소
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 관람,체험
+										li: a(href="#") 관리,안내
+										li: a(href="#") 레저,테마
+										li: a(href="#") 문화,유적
+								.col-xs-2.category_group
+									h5
+										a(href="#") 교육, 학문
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 경시,경연대회
+										li: a(href="#") 교육원,교육센터
+										li: a(href="#") 기숙사
+										li: a(href="#") 도서관
+								.col-xs-2.category_group
+									h5
+										a(href="#") 금융, 보험
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 금융감독원
+										li: a(href="#") 금융서비스
+										li: a(href="#") 보험
+										li: a(href="#") 신용,보증
+								.col-xs-2.category_group
+									h5
+										a(href="#") 공공, 사회기관
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 공공,행정시설
+										li: a(href="#") 공사,공단
+										li: a(href="#") 대사관,영사관
+										li: a(href="#") 사법기관
+								.col-xs-2.category_group
+									h5
+										a(href="#") 건강, 의료
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 대체,보조의료
+										li: a(href="#") 동물병원
+										li: a(href="#") 병원
+										li: a(href="#") 약국
+								.col-xs-2.category_group
+									h5
+										a(href="#") 생활, 편의
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") LPG충t전소
+										li: a(href="#") 꽃집,꽃배달
+										li: a(href="#") 목욕,찜질
+										li: a(href="#") 미용
+							.category_row
+								.col-xs-2.category_group
+									h5
+										a(href="#") 쇼핑, 유통
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 가구,인테리어
+										li: a(href="#") 가정,생활용품
+										li: a(href="#") 건강,의료용품
+										li: a(href="#") 건축,토목
+								.col-xs-2.category_group
+									h5
+										a(href="#") 협회, 단체
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 가정,생활
+										li: a(href="#") 건강,의료
+										li: a(href="#") 경제,경영
+										li: a(href="#") 광고,마케팅
+								.col-xs-2.category_group
+									h5
+										a(href="#") 서비스, 산업
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 건설업
+										li: a(href="#") 광업
+										li: a(href="#") 기업
+										li: a(href="#") 농업
+								.col-xs-2.category_group
+									h5
+										a(href="#") 교통, 운수
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 교통,운수서비스
+										li: a(href="#") 도로시설
+										li: a(href="#") 여객,화물운송
+								.col-xs-2.category_group
+									h5
+										a(href="#") 지명
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 경위도명
+										li: a(href="#") 국가명
+										li: a(href="#") 국내해양명
+										li: a(href="#") 국외주요도시명
+								.col-xs-2.category_group
+									h5
+										a(href="#") 시설, 건물
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 관측시설
+										li: a(href="#") 교육시설
+										li: a(href="#") 교통시설
+										li: a(href="#") 기업,빌딩
+							.category_row
+								.col-xs-2.category_group
+									h5
+										a(href="#") 특수지도
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 실내지도
+										li: a(href="#") 자전거도로
+								.col-xs-2.category_group
+									h5
+										a(href="#") 지적편집도
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 국토계획
+										li: a(href="#") 도시계획
+										li: a(href="#") 지적지번
+								.col-xs-2.category_group
+									h5
+										a(href="#") 계획, 개발
+										span.point_color_03 [지역]
+									ul.list_category
+										li: a(href="#") 개발지구
+										li: a(href="#") 도시계획
+										li: a(href="#") 용도지역
+								.col-xs-2.category_group
+									h5
+										a(href="#")
+										span.point_color_03
+									ul.list_category
+										li: a(href="#")
+										li: a(href="#")
+										li: a(href="#")
+										li: a(href="#")
+								.col-xs-2.category_group
+									h5
+										a(href="#")
+										span.point_color_03
+									ul.list_category
+										li: a(href="#")
+										li: a(href="#")
+										li: a(href="#")
+										li: a(href="#")
+								.col-xs-2.category_group
+									h5
+										a(href="#")
+										span.point_color_03
+									ul.list_category
+										li: a(href="#")
+										li: a(href="#")
+										li: a(href="#")
+										li: a(href="#")
+
+
+
+				footer.main_footer
+					address Copyright © NAVER Corp. All Rights Reserved.
+

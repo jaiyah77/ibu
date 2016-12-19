@@ -1,0 +1,51 @@
+// Sprites Map
+$sp_ibu: (
+	name: 'sp_ibu',
+	width: 88px,
+	height: 84px,
+	image: '../img/sprite/sp_ibu.png',
+	sprites: (
+	file_photo: (
+			offset-x: 0px,
+			offset-y: 0px,
+			width: 48px,
+			height: 38px,
+		),
+		folded: (
+			offset-x: -66px,
+			offset-y: -61px,
+			width: 11px,
+			height: 6px,
+		),
+		logo_ibu: (
+			offset-x: -52px,
+			offset-y: 0px,
+			width: 36px,
+			height: 32px,
+		),
+		logo_naver: (
+			offset-x: 0px,
+			offset-y: -42px,
+			width: 32px,
+			height: 32px,
+		),
+		popup_close: (
+			offset-x: -66px,
+			offset-y: -42px,
+			width: 19px,
+			height: 15px,
+		),
+		unfolded: (
+			offset-x: 0px,
+			offset-y: -78px,
+			width: 11px,
+			height: 6px,
+		),
+		user_photo: (
+			offset-x: -36px,
+			offset-y: -42px,
+			width: 26px,
+			height: 26px,
+		),
+	)
+);

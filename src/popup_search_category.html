@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>IBU</title>
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/ibu.css">
+	</head>
+	<body>
+		<div class="wrap_popup">
+			<main class="popup">
+				<div class="popup_top">
+					<div class="top_left">
+						<h2 class="top_title">카테고리 검색</h2>
+					</div>
+					<div class="top_right">
+						<button class="top_close" role="button" aria-lable="닫기"></button>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row popup_search_wrap">
+						<div class="col-xs-5">
+							<form class="form-inline">
+								<div class="pop_form_search">
+									<input class="form-control" type="text" style="width:100%">
+									<button class="btn btn-default btn_search" role="button" type="submit">검색</button>
+								</div>
+							</form>
+							<!-- [MARKUP 탭활성화 클래스 .is_active]-->
+							<ul class="tab_ibu clearfix">
+								<li class="is_active">
+									<a href="#none">사이트 카테고리</a>
+								</li>
+								<li>
+									<a href="#none">지도지역 카테고리</a>
+								</li>
+							</ul>
+							<div class="tree_ibu_wrap">
+								<ul>
+									<li>
+										<a href="#">
+											<span class="text">문화, 예술
+												<span class="category">(공공/학교)</span>
+											</span>
+										</a>
+										<span class="point_color_03">[사이트]</span>
+									</li>
+									<!-- [MARKUP] 하위 메뉴가 있는 경우 선택하면 아이콘 활성화(-) .is_selected-->
+									<li class="is_selected">
+										<a href="#">
+											<span class="text">인물,사람들
+												<span class="category">(이슈)</span>
+											</span>
+										</a>
+										<span class="point_color_03">[사이트]</span>
+										<ul class="tree_2depth">
+											<li>
+												<a href="#">
+													<szpan class="text">개인 홈페이지
+														<span class="category">(이슈)</span>
+													</szpan>
+												</a>
+												<span class="point_color_03">[사이트]</span>
+											</li>
+											<li class="is_selected">
+												<a href="#">
+													<szpan class="text">코미디언, 개그맨
+														<span class="category">(이슈)</span>
+													</szpan>
+												</a>
+												<span class="point_color_03">[사이트]</span>
+												<ul class="tree_3depth">
+													<!-- [MARKUP] 하위메뉴가 없는 경우 .no_depth 추가-->
+													<li class="no_depth">
+														<a href="#">
+															<span class="text">남희석
+																<span class="category">(이슈)</span>
+															</span>
+														</a>
+														<span class="point_color_03">[사이트]</span>
+													</li>
+													<li class="no_depth">
+														<a href="#">
+															<span class="text">박경림
+																<span class="category">(이슈)</span>
+															</span>
+														</a>
+														<span class="point_color_03">[사이트]</span>
+													</li>
+													<li class="no_depth">
+														<a href="#">
+															<span class="text">심현섭
+																<span class="category">(이슈)</span>
+															</span>
+														</a>
+														<span class="point_color_03">[사이트]</span>
+													</li>
+													<li class="no_depth">
+														<a href="#">
+															<span class="text">강성범
+																<span class="category">(이슈)</span>
+															</span>
+														</a>
+														<span class="point_color_03">[사이트]</span>
+													</li>
+													<li class="is_selected">
+														<a href="#">
+															<span class="text">왕가
+																<span class="category">(이슈)</span>
+															</span>
+														</a>
+														<span class="point_color_03">[사이트]</span>
+														<ul class="tree_4depth">
+															<li>
+																<a href="#">
+																	<span class="text">모나코
+																		<span class="category">(이슈)</span>
+																	</span>
+																</a>
+																<span class="point_color_03">[사이트]</span>
+															</li>
+															<li>
+																<a href="#">
+																	<span class="text">영국
+																		<span class="category">(이슈)</span>
+																	</span>
+																</a>
+																<span class="point_color_03">[사이트]</span>
+															</li>
+															<li class="is_selected">
+																<a href="#">
+																	<span class="text">스페인
+																		<span class="category">(이슈)</span>
+																	</span>
+																</a>
+																<span class="point_color_03">[사이트]</span>
+																<ul class="tree_5depth">
+																	<li class="no_depth">
+																		<a href="#">
+																			<span class="text">후안 카를로스
+																				<span class="category">(이슈)</span>
+																			</span>
+																		</a>
+																		<span class="point_color_03">[사이트]</span>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">
+											<span class="text">뉴스, 미디어
+												<span class="category">(공공/학교)</span>
+											</span>
+										</a>
+										<span class="point_color_03">[사이트]</span>
+									</li>
+									<li>
+										<a href="#">
+											<span class="text">게임
+												<span class="category">(이슈)</span>
+											</span>
+										</a>
+										<span class="point_color_03">[사이트]</span>
+									</li>
+									<li>
+										<a href="#">
+											<span class="text">레저, 스포츠
+												<span class="category">(이슈)</span>
+											</span>
+										</a>
+										<span class="point_color_03">[사이트]</span>
+									</li>
+									<li>
+										<a href="#">
+											<span class="text">경영, 재태크
+												<span class="category">(공공/학교)</span>
+											</span>
+										</a>
+										<span class="point_color_03">[사이트]</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-xs-7">
+							<h3 class="table-title">검색결과</h3>
+							<div class="text-right">
+								<span class="total">전체
+									<strong class="point_color_03">785</strong>&nbsp;건</span>
+							</div>
+							<div class="popup_search_result">
+								<ul>
+									<li>
+										<button class="btn btn-default btn_select" role="button">선택</button>
+										<a href="#none">인물,사람들 > 노동운동가
+											<span>(이슈)</span>
+										</a>
+									</li>
+									<li>
+										<button class="btn btn-default btn_select" role="button">선택</button>
+										<a href="#none">인물, 사람들 > 코미디언, 개그맨 > 박준형
+											<span>(이슈)</span>
+										</a>
+									</li>
+									<li>
+										<button class="btn btn-default btn_select" role="button">선택</button>
+										<a href="#none">인물, 사람들 > 경영컨설턴트
+											<span>(이슈)</span>
+										</a>
+									</li>
+									<li>
+										<button class="btn btn-default btn_select" role="button">선택</button>
+										<a href="#none">엔터테인먼트 > 방송프로그램 > TV 프로그램 > CARTOON NETWORK
+											<span>(이슈)</span>
+										</a>
+									</li>
+									<li>
+										<button class="btn btn-default btn_select" role="button">선택</button>
+										<a href="#none">컴퓨터, 인터넷 > 채팅, 대화 > 통신언어, 채팅용어
+											<span>(이슈)</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="paginate text-center">
+								<ul class="pagination">
+									<li class="page-ITEM">
+										<a class="page-link" href="#">
+											<i class="fa fa-angle-left" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 이전 페이지로 이동</span>
+										</a>
+									</li>
+									<!-- [MARKUP] 선택된 페이지 비활성화 .disabled 처리-->
+									<li class="page-item disabled">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">4</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">5</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">6</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">7</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">8</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">9</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">10</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#" title="다음">
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 다음 페이지로 이동</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="popup_footer">
+					<button class="btn btn-default" type="button" role="button">닫기</button>
+				</footer>
+			</main>
+		</div>
+	</body>
+</html>

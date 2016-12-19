@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>IBU</title>
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/ibu.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<!--[MARKUP] 토글시 .is_closed 추가-->
+			<aside class="aside">
+				<div class="aside_logo">
+					<div class="logo_naver" title="Naver"></div>
+					<div class="logo_ibu" title="IBU"></div>
+				</div>
+				<div class="aside_toggle">
+					<button class="toggle_button" role="button" aria-label="GNB 접기"></button>
+				</div>
+				<menu class="aside_menu">
+					<div class="menu_list">
+						<a class="menu_item as_item_01 is_selected" href="#">
+							<span class="text">검색</span>
+						</a>
+						<div class="menu_2depth">
+							<a href="#">
+								<span class="text">통합 데이터</span>
+							</a>
+							<div class="menu_3depth">
+								<a class="is_selected" href="#">
+									<span class="text">전체</span>
+								</a>
+								<a href="#">
+									<span class="text">사이트+지역</span>
+								</a>
+								<a href="#">
+									<span class="text">사이트</span>
+								</a>
+								<a href="#">
+									<span class="text">지역</span>
+								</a>
+							</div>
+							<a href="#">
+								<span class="text">카테고리</span>
+							</a>
+							<div class="menu_3depth">
+								<a href="#">
+									<span class="text">카테고리</span>
+								</a>
+							</div>
+						</div>
+						<a class="menu_item as_item_02" href="#">
+							<span class="text">카테고리</span>
+						</a>
+						<a class="menu_item as_item_03" href="#">
+							<span class="text">통합데이터</span>
+						</a>
+						<a class="menu_item as_item_04" href="#">
+							<span class="text">바로가기</span>
+						</a>
+						<a class="menu_item as_item_05" href="#">
+							<span class="text">요청</span>
+						</a>
+						<a class="menu_item as_item_06" href="#">
+							<span class="text">통계</span>
+						</a>
+						<a class="menu_item as_item_07" href="#">
+							<span class="text">기타</span>
+						</a>
+						<a class="menu_item as_item_08" href="#">
+							<span class="text">브랜드</span>
+						</a>
+					</div>
+				</menu>
+				<div class="aside_btns">
+					<a class="anchor" href="#" title="등록">
+						<span class="text">통합데이터 등록</span>
+					</a>
+					<a class="anchor" href="#" title="검색">
+						<span class="text">전체 사유 검색하기</span>
+					</a>
+				</div>
+			</aside>
+			<main class="main">
+				<div class="main_top">
+					<div class="top_left">
+						<span class="top_user">
+							<span class="user_photo">
+								<img class="photo">
+							</span>
+							<a class="user_name" href="#">
+								<span class="name">박재나</span>
+								<span class="id">(NT111111)</span>
+							</a>
+						</span>
+						<i class="separator"></i>
+						<a href="#">로그아웃</a>
+						<a class="top_more" href="#">서비스목록</a>
+					</div>
+					<div class="top_right">
+						<a href="#">IIMS</a>
+						<i class="separator"></i>
+						<a href="#">브라우저설정</a>
+						<i class="separator"></i>
+						<a href="#">자주묻는질문</a>
+						<i class="separator"></i>
+						<a href="#">개인권한</a>
+						<i class="separator"></i>
+						<a href="#">DRT 담당자안내</a>
+						<i class="separator"></i>
+						<a class="top_more" href="#">더보기 </a>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-4">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="">통합데이타</label>
+									<select class="form-control">
+										<option disabled selected>지역상세 ID</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									<input class="form-control" type="text" id="" style="width:140px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-xs-4">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="">카테고리</label>
+									<input class="form-control" type="text" id="" style="width:140px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-xs-4">
+							<form class="form-inline text-center">
+								<div class="form-group">
+									<label for="">지역(주소)</label>
+									<input class="form-control" type="text" id="" style="width:140px">
+									<button class="btn btn-default" type="submit">검색</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row row_type1">
+						<div class="col-xs-12">
+							<ul class="line_map">
+								<li>
+									<a href="#">HOME</a>
+								</li>
+								<li>
+									<a href="#">인물, 사람들</a>
+								</li>
+								<li>
+									<a href="#">배우</a>
+								</li>
+								<li>
+									<a href="#">뮤지컬배우</a>
+								</li>
+							</ul>
+							<table class="table table-bordered">
+								<colgroup>
+									<col style="width:185px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">영문경로</th>
+										<td>/People/Actor/Musical_Actor</td>
+									</tr>
+									<tr>
+										<th scope="row" rowspan="2">연관링크</th>
+										<td>
+											<a class="link_decoration" href="#">문화, 예술 > 공연예술 > 뮤지컬</a>
+											<span>> 뮤지컬 배우 @</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a class="link_decoration" href="#">인물, 사람들 > 공연예술가 > 뮤지컬</a>
+											<span>> 뮤지컬 배우 @</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<h5 class="heading5_ibu">코디 카테고리
+								<small>코디 키워드 지정이 안되어 있습니다.</small>
+							</h5>
+							<div class="clearfix">
+								<p class="result_number">
+									<span>- 하위 카테고리 :</span>
+									<span>총
+										<strong class="point_color_03">86</strong> 건</span>
+									<button class="btn btn-default" role="button">숨김/보임</button>
+								</p>
+							</div>
+							<!-- [MARKUP] 숨김처리 클래스 .sub_category 에 .is_hidden 토글-->
+							<div class="sub_category">
+								<h6 class="sub_category_title">NULL_1</h6>
+								<ul class="clearfix">
+									<li>
+										<input type="checkbox">
+										<a href="#">최대글자수 모름, 임으로 지정 @</a>
+										<span class="point_color_07">[코디]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">최대글자수 모름, 임으로 지정 @</a>
+										<span class="point_color_07">[코디]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">앤티크, 클래식가구</a>
+										<span class="point_color_07">[코디하위]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">최대글자수 모름, 임으로 지정 @</a>
+										<span class="point_color_07">[코디]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">강동호</a>
+										<span class="point_color_07">[패스][노출이름]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">강동호</a>
+										<span class="point_color_07">[패스][노출이름]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">학교, 학원교구</a>
+										<span class="point_color_07">[패스][노출이름]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">강동호</a>
+										<span class="point_color_07">[패스][노출이름]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">강태을 @</a>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">도서관가구</a>
+										<span class="point_color_07"></span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">송창의</a>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">강태을 @</a>
+									</li>
+								</ul>
+								<h6 class="sub_category_title">NULL_1</h6>
+								<ul class="clearfix">
+									<li>
+										<input type="checkbox">
+										<a href="#">침대</a>
+										<span class="point_color_07">[코디하위]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">최대글자수 모름, 임으로 지정 @</a>
+										<span class="point_color_07">[코디]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">앤티크, 클래식가구</a>
+										<span class="point_color_07">[코디하위]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">책상</a>
+										<span class="point_color_07">[코디]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">강동호 @</a>
+										<span class="point_color_07">[패스][노출이름]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">강동호</a>
+										<span class="point_color_07">[패스][노출이름]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">소파</a>
+										<span class="point_color_07">[패스][노출이름]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">도서관가구</a>
+										<span class="point_color_07">[패스][노출이름]</span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">시릴 니콜라이 @</a>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">오나라 @</a>
+										<span class="point_color_07"></span>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">김도현 @</a>
+									</li>
+									<li>
+										<input type="checkbox">
+										<a href="#">강태을 @</a>
+									</li>
+								</ul>
+								<h6 class="sub_category_title">자동색인</h6>
+								<h6 class="sub_category_title">사이트 카테고리</h6>
+							</div>
+							<div class="clearfix">
+								<p class="result_number help-block">
+									<span>- 통합데이터 :</span>
+									<span>총
+										<strong class="point_color_03">715</strong> 건</span>
+									<span class="form-inline">
+										<select class="form-control" style="width:130px">
+											<option selected>전체</option>
+											<option>1</option>
+										</select>
+										<input class="form-control" type="text" id="" style="width:60px">&nbsp;개씩 &nbsp;&nbsp;
+										<select class="form-control" style="width:130px">
+											<option selected>정렬안함</option>
+											<option>1</option>
+										</select>
+										<button class="btn btn-default" role="button">보기</button>
+									</span>
+								</p>
+							</div>
+							<div class="list_data">
+								<ul>
+									<li>
+										<input type="checkbox" id="">
+										<a href="#">필하우스</a>
+										<b class="point_color_02">(1)</b>
+										<span class="point_color_05">[사이트]</span>
+										<span class="point_color_06">[이용자]</span>
+										<span class="text">- 가구 판매 전문업체, 공주침대, 화장대, 화이트 엔틱 장식장, 붙박이장 등 맞춤 안내.</span>클릭 :
+										<span class="point_color_03"> 0.235668</span>
+										<button class="btn btn-default" role="button">수정</button>
+									</li>
+									<li>
+										<input type="checkbox" id="">
+										<a href="#">고양시부자재 토탈하드웨어</a>
+										<b class="point_color_02">(1)</b>
+										<span class="point_color_07">[바로가기]</span>
+										<span class="point_color_05">[사이트]</span>
+										<span class="point_color_06">[이용자편집]</span>
+										<span class="point_color_08">[에디터]</span>
+										<span class="text">- 경기,고양시,일산서구,가구,인테리어,공방,씽크부자재전문업체.</span>클릭 :
+										<span class="point_color_03"> 0.235668</span>
+										<button class="btn btn-default" role="button">수정</button>
+									</li>
+									<li>
+										<input type="checkbox" id="">
+										<a href="#">미지애</a>
+										<b class="point_color_02">(1)</b>
+										<span class="point_color_05">[사이트]</span>
+										<span class="point_color_08">[에디터]</span>
+										<span class="text">- 생활용품 판매업체, 달력, 방석, 앞치마, 침구, 가방 등 판매.</span>클릭 :
+										<span class="point_color_03"> 0.0</span>
+										<button class="btn btn-default" role="button">수정</button>
+									</li>
+								</ul>
+							</div>
+							<div class="paginate text-center">
+								<ul class="pagination">
+									<li class="page-item">
+										<a class="page-link" href="#">
+											<i class="fa fa-angle-left" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 이전 페이지로 이동</span>
+										</a>
+									</li>
+									<!-- [MARKUP] 선택된 페이지 비활성화 .disabled 처리-->
+									<li class="page-item disabled">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">4</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">5</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">6</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">7</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">8</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">9</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#" title="다음">
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+											<span class="sr-only">목록에서 다음 페이지로 이동</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="main_footer">
+					<address>Copyright © NAVER Corp. All Rights Reserved.</address>
+				</footer>
+			</main>
+		</div>
+	</body>
+</html>

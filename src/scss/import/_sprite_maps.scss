@@ -1,0 +1,6 @@
+// Sprites Map import
+@import "src/scss/sprite/sp_common.scss";
+@import "src/scss/sprite/sp_ibu.scss";
+
+// Sprites Map List
+$map_list: ( $sp_common, $sp_ibu );

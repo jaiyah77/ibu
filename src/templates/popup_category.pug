@@ -1,0 +1,56 @@
+doctype
+html(lang="ko")
+	head
+		meta(charset="utf-8")
+		title IBU
+		link(rel="stylesheet" href="css/bootstrap-custom.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous")
+		link(rel="stylesheet" href="css/ibu.css")
+	body
+		.wrap_popup
+			main.popup
+				.popup_top
+					.top_left
+						h2.top_title 카테고리 수정
+					.top_right
+						button.top_close(role="button" aria-lable="닫기")
+
+				.container-fluid
+					.row
+						.col-xs-12.popup_contents
+							h3.table-title 히스토리
+							p.result_number
+									| 검색결과 :&nbsp;
+									span.
+										총 #[strong.point_color_03 18] 건
+							table.table-ibu-default
+								colgroup
+									col(style="width:11%")
+									col(style="width:10%")
+									col(style="width:9%")
+									col(style="width:*")
+									col(style="width:32%")
+								thead
+									tr
+										th(scope="col") 작업자
+										th(scope="col") 날짜
+										th(scope="col") 직업
+										th(scope="col") 상세
+										th(scope="col") 코멘트
+								tbody
+									tr
+										td 지역DB팀
+										td 2014.07.07 <br> 10:54:06
+										td modify
+										td.text-left 카테고리 POI정보 일괄 수정
+										td.text-lef
+									tr
+										td 지역DB팀
+										td 2014.07.07 <br> 10:54:06
+										td modify
+										td.text-left 키워드: ->음식점;음식;맛집;식당;맛있는집;도시락;컵밥;
+											| 단체도시락;도시락배달;도시락집배달
+										td.text-left DBSRCHSUS-4174카테고리 키워드 일괄 추가
+
+				footer.popup_footer
+					button.btn.btn-default(type="button" role="button") 닫기
